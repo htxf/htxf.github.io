@@ -64,6 +64,69 @@ MathJax.Hub.Config({
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
   
+    <article id="post-JS高程（二）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/11/03/JS高程（二）/">JS高程（二）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-11-03T03:50:23.000Z" itemprop="datePublished">Nov 3 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第3章-基本概念"><a href="#第3章-基本概念" class="headerlink" title="第3章 基本概念"></a>第3章 基本概念</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h3><ul>
+<li><p>区分大小写</p>
+</li>
+<li><p>多行注释</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</div><div class="line"> * 这两行的星星是没有必要的，</div><div class="line"> * 但就是好看啊。</div><div class="line"> */</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-关键字和保留字"><a href="#2-关键字和保留字" class="headerlink" title="2. 关键字和保留字"></a>2. 关键字和保留字</h3><p>这两个的异同是什么呢？<br>异：</p>
+<blockquote>
+<p>关键字可用于表示控制语句的开始或结束，或者用于执行特定操作等</p>
+<p>保留字有可能将来被用作关键字</p>
+</blockquote>
+<p>同：都是小写的。。</p>
+<h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3. 变量"></a>3. 变量</h3><ul>
+<li><p>变量是<strong>松散类型</strong>，可以用来保存任何类型的数据。</p>
+</li>
+<li><p>用 var 定义的变量将成为该变量作用域中的<strong>局部变量</strong>；省略 var操作符，创建的是<strong>全局变量</strong>。（对函数而言？）</p>
+</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2016/11/03/JS高程（二）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS基础/">JS基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Android还踢球app总结（一）" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -221,65 +284,6 @@ MathJax.Hub.Config({
     </div>
     <footer class="article-footer">
       
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-JS高程（一）" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2016/10/26/JS高程（一）/">JS高程（一）</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2016-10-26T13:24:23.000Z" itemprop="datePublished">Oct 26 2016</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第1章-简介"><a href="#第1章-简介" class="headerlink" title="第1章 简介"></a>第1章 简介</h2><h3 id="1-几个人东"><a href="#1-几个人东" class="headerlink" title="1. 几个人东"></a>1. 几个人东</h3><ul>
-<li>布兰登 艾奇 (Brendan Eich)</li>
-<li>ECMA(European Computer Manufactures Association) 欧洲计算机制造商协会</li>
-<li>ISO/IEC(International Organization for Standardization and International Electrotechnical Commission) 国际标准化组织和国际电工委员会</li>
-</ul>
-<h3 id="2-JavaScript-ECMAScript-DOM-BOM"><a href="#2-JavaScript-ECMAScript-DOM-BOM" class="headerlink" title="2. JavaScript = ECMAScript + DOM + BOM"></a>2. JavaScript = ECMAScript + DOM + BOM</h3><ul>
-<li>ECMAScript：Web浏览器只是ECMAScript <strong>宿主环境之一</strong>, Node和Adobe Flash 也是ECMAScript的宿主环境。</li>
-<li>DOM(Document Object Model)：文档对象模型。<ul>
-<li><strong>是个API</strong>。针对XML但经过扩展用于HTMl的API。</li>
-<li>由W3C(World Wide Web Consortium)万维网联盟闹的。避免Netscape和微软的两强割据。（两家闹不同的DHTML Dynamic HTML）</li>
-<li>DOM级别。自己理解所谓级别是不同阶段的标准，或者说后来又加入的新功能；DOM1，DOM2，DOM3级。DOM0级呢？没有，其实对应上边的DHTML。 </li>
-<li>不光是JavaScript有DOM，有其他语言也实现了DOM。SVG(Scalable Vector Graphic)可伸缩矢量图是一种语言，实现了DOM，有自己的标准。？？？</li>
-</ul>
-</li>
-<li>BOM(Browser Object Model)：浏览器对象模型。
-        
-          <p class="article-more-link">
-            <a href="/2016/10/26/JS高程（一）/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS基础/">JS基础</a></li></ul>
-
 
     </footer>
   </div>
