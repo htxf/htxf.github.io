@@ -37,7 +37,7 @@
 
 同：都是小写的。。
 3. 变量">
-<meta property="og:updated_time" content="2016-11-07T03:30:19.677Z">
+<meta property="og:updated_time" content="2016-11-14T10:01:00.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程（二）">
 <meta name="twitter:description" content="第3章 基本概念1. 语法
@@ -340,7 +340,7 @@ MathJax.Hub.Config({
 <blockquote>
 <p>由于ECMAScript中不存在块级作用域，因此在循环内部定义的变量也可以在外部访问到</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</div><div class="line">    alert(i);</div><div class="line">&#125;</div><div class="line">alert(i); <span class="comment">// 10 i是在循环体内定义的，再循环体外也可访问到</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++) &#123;</div><div class="line">    alert(i);</div><div class="line">&#125;</div><div class="line">alert(i); <span class="comment">// 10 i是在循环体内定义的，在循环体外也可访问到</span></div></pre></td></tr></table></figure>
 <h4 id="6-5-for-in语句"><a href="#6-5-for-in语句" class="headerlink" title="6.5 for-in语句"></a>6.5 for-in语句</h4><blockquote>
 <p>for-in语句是一种精确的迭代语句，可以用来<strong>枚举</strong> <strong>对象的</strong> <strong>属性</strong></p>
 </blockquote>
@@ -406,6 +406,8 @@ MathJax.Hub.Config({
   
     
 <nav id="article-nav">
+  
+    <a href="/2016/11/14/JS高程（三）/" id="article-nav-newer" class="article-nav-link-wrap">WEI</a>
   
   
     <a href="/2016/10/30/Android还踢球app总结（一）/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>
