@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Htxf-fxtH">
 <meta property="og:description" content="第4章 变量、作用域和内存问题1. 基本类型值和引用类型值注意区别：ECMAScript有6种数据类型（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同数据类型的值，即基本类型值 是指简单的数据段引用类型值是指那些可能由多个值构成的对象
 5种基本数据类型：Undefined、Null、Boolean、Number、String是基本类型值，是按值访问的，因为可以操作保">
-<meta property="og:updated_time" content="2016-11-14T11:21:11.583Z">
+<meta property="og:updated_time" content="2016-12-22T09:23:24.659Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程（三）">
 <meta name="twitter:description" content="第4章 变量、作用域和内存问题1. 基本类型值和引用类型值注意区别：ECMAScript有6种数据类型（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同数据类型的值，即基本类型值 是指简单的数据段引用类型值是指那些可能由多个值构成的对象
@@ -93,7 +93,7 @@ MathJax.Hub.Config({
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="第4章-变量、作用域和内存问题"><a href="#第4章-变量、作用域和内存问题" class="headerlink" title="第4章 变量、作用域和内存问题"></a>第4章 变量、作用域和内存问题</h2><h3 id="1-基本类型值和引用类型值"><a href="#1-基本类型值和引用类型值" class="headerlink" title="1. 基本类型值和引用类型值"></a>1. 基本类型值和引用类型值</h3><p>注意区别：ECMAScript有6种<strong>数据类型</strong>（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同<strong>数据类型的值</strong>，即<br><strong>基本类型值</strong> 是指简单的数据段<br><strong>引用类型值</strong>是指那些可能由多个值构成的对象</p>
-<p>5种基本数据类型：Undefined、Null、Boolean、Number、String是<strong>基本类型值</strong>，是<strong>按值访问</strong>的，因为可以操作保存在变量中的实际的值。<br>1种复杂数据类型：Object是<strong>引用类型值</strong>，是<strong>按引用访问</strong>的，因为操作对象时，实际上是在操作对象的引用而不是实际的对象。</p>
+<p>5种基本数据类型：Undefined、Null、Boolean、Number、String是<strong>基本类型值</strong>，是<strong>按值访问</strong>的，因为可以操作保存在变量中的实际的值。<br>1种复杂数据类型：Object是<strong>引用类型值</strong>，是<strong>按引用访问</strong>的，因为操作对象时，实际上是在操作对象的引用而不是实际的对象。<br><a id="more"></a></p>
 <h4 id="1-1-复制变量值"><a href="#1-1-复制变量值" class="headerlink" title="1.1 复制变量值"></a>1.1 复制变量值</h4><ul>
 <li><p>基本类型值的复制</p>
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1;</div><div class="line">alert(num1); <span class="comment">// 5</span></div><div class="line">alert(num2); <span class="comment">// 5</span></div><div class="line">num1 = <span class="number">10</span>;</div><div class="line">alert(num1); <span class="comment">// 10</span></div><div class="line">alert(num2); <span class="comment">// 5    num1和num2的值各一份 互不影响</span></div></pre></td></tr></table></figure>
