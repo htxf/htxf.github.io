@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-01-04T07:11:55.607Z</updated>
+  <updated>2017-01-17T10:33:24.415Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/01/03/Android%E8%BF%98%E8%B8%A2%E7%90%83app%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2017/01/03/Android还踢球app总结（二）/</id>
     <published>2017-01-03T07:43:14.000Z</published>
-    <updated>2017-01-04T07:11:55.607Z</updated>
+    <updated>2017-01-17T10:33:24.415Z</updated>
     
     <content type="html"><![CDATA[<p>第二篇介绍下界面设计及其实现。当然是想遵循Material Design。但它不是单单的大色块，或者是某些控件的应用。还有层级、动画之类的设计。我做的呢其实是很简单，而且主要是copy了好多介绍这类设计的demo。比如Google出的一个<a href="https://github.com/chrisbanes/cheesesquare" target="_blank" rel="external">Cheesesquare</a>，这个主要是介绍<strong>Android Design library</strong>。然后几乎就按照这样的设计做的。。目前实现了<strong>找组织</strong>模块。<br><a id="more"></a></p>
 <h2 id="1-浏览帖子"><a href="#1-浏览帖子" class="headerlink" title="1. 浏览帖子"></a>1. 浏览帖子</h2><p>难点或者说比较新的东西就在这块。<br>实现效果如下图所示。</p>
