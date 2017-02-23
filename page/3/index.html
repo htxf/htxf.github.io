@@ -66,6 +66,51 @@ MathJax.Hub.Config({
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
   
+    <article id="post-关于hexo的一些问题" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/03/13/关于hexo的一些问题/">关于hexo的一些问题</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-03-13T13:24:23.000Z" itemprop="datePublished">Mar 13 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-hexo的deploy问题"><a href="#1-hexo的deploy问题" class="headerlink" title="1.hexo的deploy问题"></a>1.hexo的deploy问题</h2><p>之前在修改完主题之后，deploy就有过问题。</p>
+<p><strong>解决：</strong></p>
+<p>查资料后说是ssh key的问题。然后按照github上的关于ssh keys的<a href="https://help.github.com/categories/ssh/">help</a>重新产生了一个ssh key，问题解决。<br>但这次写完上篇笔记再deploy时，又出现了问题。但是我去<strong>C:\Users\Administrator.ssh</strong>目录查看,ssh key的几个文件都在，值和github自己账户上的ssh keys的值也完全一样。应该不是ssh key的问题了。<br><del>网上有个方法是将github上的clone url改为HTTPS，同时配置hexo的_config.yml，并将.deploy_git文件夹删除。再进行deploy，然而还不行。</del><br>最后是看见有人分享是因为Git的版本太高，降级到1.9几就好了。本来我用的是2.5的，降级到1.9.5的确解决了！！！</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/03/13/关于hexo的一些问题/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-计算机系统结构" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -236,57 +281,9 @@ MathJax.Hub.Config({
 
 
   
-    <article id="post-Test" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2015/12/22/Test/">Test</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2015-12-22T11:39:59.000Z" itemprop="datePublished">Dec 22 2015</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Test1"><a href="#Test1" class="headerlink" title="Test1"></a>Test1</h1><h2 id="Test2"><a href="#Test2" class="headerlink" title="Test2"></a>Test2</h2><p>Test Test</p>
-<p>Test</p>
-<p><em>Test</em></p>
-<p><strong>Test</strong><br>
-        
-          <p class="article-more-link">
-            <a href="/2015/12/22/Test/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/haha/">haha</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">&raquo;</a>
     </nav>
   
 

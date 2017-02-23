@@ -66,6 +66,55 @@ MathJax.Hub.Config({
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
   
+    <article id="post-Android还踢球app总结（一）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/10/30/Android还踢球app总结（一）/">Android还踢球app总结（一）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-10-30T08:27:03.000Z" itemprop="datePublished">Oct 30 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个小项目做完快半年多了，一直想总结一下，记录一些想法和技能。大概分五篇完成，第一篇介绍目标人群、需求分析还有功能介绍；第二篇介绍界面设计及简单的代码实现；第三篇介绍”开发模式“；第四篇介绍用到的第三方服务；第五篇介绍一些小的功能点和知识点。</p>
+<h2 id="1-目标人群"><a href="#1-目标人群" class="headerlink" title="1.目标人群"></a>1.目标人群</h2><p>当然是广大的足球爱好者，是真正想下场踢球的足球爱好者。</p>
+<p>稍微扯点别的，为什么取“还踢球”这个名字？现在中国足球很让人失望（貌似从自己真正看球时就一直让人失望，除了之前高洪波带着打韩国、德国、法国那几场……），但真正爱球的人谁不希望他变得更好呢，再差也想看，想着能变得好一点。“还踢球”是星爷《功夫》里的一句台词，一群小孩在踢球，球被踢到星爷这边，然后近景是星爷的腿，远处一群小孩，两栋破楼，星爷来了一段freestyle，很帅，小孩问：“叔叔，可不可教我们踢球啊？”。没想到星爷回的是：”还踢球？！“，然后一脚把球踩“泄”了。这应该能够表达很多人对中国足球的感受了……但真要这样的话，中国足球是不可能有出头之日了。有时候有中国队的比赛，周围不看球的人总会说“啊，中国队连XX都踢不过啊”，“不用看了，肯定输了”，稍微瞥一眼直播，“这都停不住”，“这配合也太烂了吧”……诸如此类，网上的喷子更不用说了。很心烦，但感觉说什么都没用。我们能做得是真的去踢踢球，然后能够慢慢影响周围的人觉得说踢好球真不是件容易的事，而又是一件令人激动、令人开心的事。</p>
+<h2 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2.需求分析"></a>2.需求分析</h2><p>真的开发一款软件时，需求分析很重要的。但没有亲身经历过，只是看过课本上的讲的。出一份需求分析文档更麻烦了。这里的需求分析都是自己凭空想的，起码自己曾经也算个足球“超级狂der”爱好者吧。文档里主要有写可行性分析和功能需求（用用例图和用例描述进行介绍）。</p>
+<p>自己想要做这一款app时主要是由于自己需求。想踢球时不知道谁有空，在哪里可以踢，尤其是刚到一个新的城市时。虽然踢一次，大家可以留联系方式，但其实不可能与所有踢球的朋友联系上。所以我最想要的功能是可以发布一些约球的信息，填写时间、地点、几人制的，大家可以报名，人多了，去了也可以分拨。然后按照约球的时间排序，大家也可以浏览什么时间什么地点有球踢，可以选择的去参加。这个功能其实就类似一个论坛，能够发帖、浏览帖子。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/10/30/Android还踢球app总结（一）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-不同电脑上test2" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -242,54 +291,9 @@ MathJax.Hub.Config({
 
 
   
-    <article id="post-关于hexo的一些问题" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2016/03/13/关于hexo的一些问题/">关于hexo的一些问题</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2016-03-13T13:24:23.000Z" itemprop="datePublished">Mar 13 2016</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="1-hexo的deploy问题"><a href="#1-hexo的deploy问题" class="headerlink" title="1.hexo的deploy问题"></a>1.hexo的deploy问题</h2><p>之前在修改完主题之后，deploy就有过问题。</p>
-<p><strong>解决：</strong></p>
-<p>查资料后说是ssh key的问题。然后按照github上的关于ssh keys的<a href="https://help.github.com/categories/ssh/">help</a>重新产生了一个ssh key，问题解决。<br>但这次写完上篇笔记再deploy时，又出现了问题。但是我去<strong>C:\Users\Administrator.ssh</strong>目录查看,ssh key的几个文件都在，值和github自己账户上的ssh keys的值也完全一样。应该不是ssh key的问题了。<br><del>网上有个方法是将github上的clone url改为HTTPS，同时配置hexo的_config.yml，并将.deploy_git文件夹删除。再进行deploy，然而还不行。</del><br>最后是看见有人分享是因为Git的版本太高，降级到1.9几就好了。本来我用的是2.5的，降级到1.9.5的确解决了！！！</p>
-        
-          <p class="article-more-link">
-            <a href="/2016/03/13/关于hexo的一些问题/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&laquo;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">&raquo;</a>
     </nav>
   
 

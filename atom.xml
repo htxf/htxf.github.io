@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-02-20T05:37:44.462Z</updated>
+  <updated>2017-02-23T07:37:18.998Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,185 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS高程（四）</title>
+    <link href="http://yoursite.com/2017/02/22/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>http://yoursite.com/2017/02/22/JS高程（四）/</id>
+    <published>2017-02-22T09:17:49.000Z</published>
+    <updated>2017-02-23T07:37:18.998Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="第5章-引用类型（一）（Object、Array、Date）"><a href="#第5章-引用类型（一）（Object、Array、Date）" class="headerlink" title="第5章 引用类型（一）（Object、Array、Date）"></a>第5章 引用类型（一）（Object、Array、Date）</h2><p><strong>引用类型</strong>是一种数据结构，和其他面向对象语言中的<strong>类</strong>很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型<strong>Object</strong>，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，也有许多内置的<strong>原生引用类型</strong>：Array、Date、RegExp、Function、基本包装类型、单体内置对象。</p>
+<a id="more"></a>
+<h3 id="5-1-Object类型"><a href="#5-1-Object类型" class="headerlink" title="5.1 Object类型"></a>5.1 Object类型</h3><ul>
+<li><p>创建的方法</p>
+<ul>
+<li><p>法一：new Object()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">"DaShuaiBi"</span>;</div><div class="line">person.age = <span class="number">18</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>法二：对象字面量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">person = &#123;<span class="attr">name</span>: <span class="string">"Dashuaibi"</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;; <span class="comment">// 属性名和属性值之间用冒号隔开； 不同属性之间用逗号隔开</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>访问对象属性的方法</p>
+<ul>
+<li><p>法一：点表示法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 接上代码</span></div><div class="line">alert(person.name);</div></pre></td></tr></table></figure>
+</li>
+<li><p>法二：使用方括号</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 接上代码</span></div><div class="line">alert(person[name]);</div></pre></td></tr></table></figure>
+</li>
+<li><p>方括号的优势</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 对象的属性名可以是字符串</span></div><div class="line">personX = &#123;<span class="string">"name"</span>: <span class="string">"DaShuaiBi"</span>, <span class="string">"age"</span>: <span class="number">16</span>&#125;;</div><div class="line">alert(personX.name); <span class="comment">// "DaShuaiBi"；点表示法仍可用</span></div><div class="line">alert(personX.<span class="string">"name"</span>); <span class="comment">// 错误！！</span></div><div class="line">alert(personX[name]); <span class="comment">// undefined</span></div><div class="line">alert(personX[<span class="string">"name"</span>]); <span class="comment">// "DaShuaiBi"</span></div><div class="line"><span class="comment">// 若是属性名很变态</span></div><div class="line">personY = &#123;<span class="string">"first name"</span>: <span class="string">"HeiHeiHei"</span>, <span class="attr">age</span>: <span class="number">16</span>&#125;;</div><div class="line">alert(personY.first name); <span class="comment">// 错误！！</span></div><div class="line">alert(personY.<span class="string">"first name"</span>); <span class="comment">// 错误！！</span></div><div class="line">alert(personY[<span class="string">"first name"</span>]); <span class="comment">// "HeiHeiHei"</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-2-Array类型"><a href="#5-2-Array类型" class="headerlink" title="5.2 Array类型"></a>5.2 Array类型</h3><ul>
+<li><p>与其他语言中数组的异同</p>
+<ul>
+<li><p>同： 都是数据的有序列表</p>
+</li>
+<li><p>异： JS中数组可以存放不同数据类型的元素；JS中数组的大小（长度）是可变的</p>
+</li>
+</ul>
+</li>
+<li><p>创建数组的方法</p>
+<ul>
+<li><p>法一： new Array()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 以下几种方法均可</span></div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>);</div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>法二： 数组字面量</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [];</div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>,]; <span class="comment">// 这样不好。很多情况下都不好，比如css的属性、json中的数据……</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>读取、设置数组元素</p>
+<p>  使用方括号、基于0索引。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 读取</span></div><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">alert(colors[<span class="number">1</span>]); <span class="comment">// "blue"</span></div><div class="line"><span class="comment">// 设置1 修改</span></div><div class="line">colors[<span class="number">1</span>] = <span class="string">"shit_yellow"</span>;</div><div class="line">alert(colors[<span class="number">1</span>]); <span class="comment">// "shit_yellow"</span></div><div class="line"><span class="comment">// 设置2 新增</span></div><div class="line">alert(colors[<span class="number">3</span>]); <span class="comment">// undefined</span></div><div class="line">colors[<span class="number">3</span>] = <span class="string">"yima_red"</span>;</div><div class="line">alert(colors[<span class="number">3</span>]); <span class="comment">// "yima_red"</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>数组的length属性</p>
+<ul>
+<li><p>返回数组的大小</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">alert(colors.length); <span class="comment">// 3</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>从数组末尾移除元素</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">colors.length = <span class="number">2</span>;</div><div class="line">alert(colors[<span class="number">2</span>]); <span class="comment">// undefined</span></div><div class="line">colors.length = <span class="number">1</span>;</div><div class="line">alert(colors[<span class="number">1</span>]); <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在数组末尾添加新项</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">alert(colors.length); <span class="comment">// 3</span></div><div class="line">colors[colors.length] = <span class="string">"yellow"</span>;</div><div class="line">colors; <span class="comment">// ["red", "blue", "green", "yellow"]</span></div><div class="line">alert(colors.length); <span class="comment">// 4</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>增大length的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">alert(colors.length); <span class="comment">// 3</span></div><div class="line">colors.length = <span class="number">5</span>; </div><div class="line">alert(colors[<span class="number">3</span>]); <span class="comment">// undefined</span></div><div class="line">alert(colors[<span class="number">4</span>]); <span class="comment">// undefined</span></div><div class="line">alert(colors[<span class="number">5</span>]); <span class="comment">// 也是undefined……</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>给不在初始范围内的位置上赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">colors[<span class="number">999</span>] = <span class="string">"yellow"</span>;</div><div class="line">alert(colors.length); <span class="comment">// 1000</span></div><div class="line">alert(colors[<span class="number">555</span>]); <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5-2-1-检测数组"><a href="#5-2-1-检测数组" class="headerlink" title="5.2.1 检测数组"></a>5.2.1 检测数组</h4><p>说明：xxx表示变量名；XXX表示某种引用类型，如Array、Function…</p>
+<ul>
+<li><p><strong>typeof</strong>操作符<br>  type of xxx;</p>
+</li>
+<li><p><strong>instanceof</strong>操作符<br>  xxx instanceof XXX</p>
+</li>
+<li><p><strong>Array.isArray()</strong>方法<br>  Array.isArray(xxx)</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> nickName = [<span class="string">"DaShuaiBi"</span>, <span class="string">"HeiHeiHei"</span>, <span class="string">"Ob"</span>];</div><div class="line"><span class="keyword">var</span> xiaoName = <span class="string">"xiaofei"</span>;</div><div class="line"></div><div class="line">alert(<span class="keyword">typeof</span> nickName); <span class="comment">// object</span></div><div class="line">alert(<span class="keyword">typeof</span> xiaoName); <span class="comment">// string</span></div><div class="line"></div><div class="line">alert(nickName <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// true</span></div><div class="line">alert(xiaoName <span class="keyword">instanceof</span> <span class="built_in">Array</span>); <span class="comment">// false</span></div><div class="line">alert(xiaoName <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">// false !!!</span></div><div class="line"></div><div class="line">alert(<span class="built_in">Array</span>.isArray(nickName)); <span class="comment">// true</span></div><div class="line">alert(<span class="built_in">Array</span>.isArray(xiaoName)); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-2-2-转换方法"><a href="#5-2-2-转换方法" class="headerlink" title="5.2.2 转换方法"></a><span id="5.2.2">5.2.2 转换方法</span></h4><p>toString()、toLocaleString()、valueOf()、join()方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>,<span class="string">"blue"</span>, <span class="string">"green"</span>];</div><div class="line">alert(colors.join()); <span class="comment">// "red,blue,green" ；大多数的默认的，用逗号分隔</span></div><div class="line">alert(colors.join(<span class="string">"||"</span>)); <span class="comment">// "red||blue||green"</span></div></pre></td></tr></table></figure>
+<p>toLocaleString()比较特殊。但不想看……</p>
+<h4 id="5-2-3-和5-2-4-栈方法和队列方法"><a href="#5-2-3-和5-2-4-栈方法和队列方法" class="headerlink" title="5.2.3 和5.2.4 栈方法和队列方法"></a>5.2.3 和5.2.4 栈方法和队列方法</h4><p>用数组Array模拟栈和队列。</p>
+<p>栈：数据只能从栈顶进出；后进先出。</p>
+<p>队列：数据只能从队首出，只能从队尾进；先进先出。</p>
+<p>三个方法：<strong>push()</strong>模拟压栈；<strong>pop()</strong>模拟出栈和队列在队尾新增元素；<strong>shift()</strong>模拟队列删除队首元素</p>
+<p>注意这几个函数的返回值！！！</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 模拟栈</span></div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">// push 将元素压入栈，并返回当前数组的长度</span></div><div class="line">alert(count); <span class="comment">// 2</span></div><div class="line">colors; <span class="comment">// ["red", "green"]</span></div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"blue"</span>);</div><div class="line">alert(count); <span class="comment">// 3</span></div><div class="line">colors; <span class="comment">// ["red", "green", "blue"]</span></div><div class="line"><span class="keyword">var</span> item = colors.pop(); <span class="comment">// 从栈顶删除元素即数组的最后边，并返回被退栈的元素</span></div><div class="line">alert(item); <span class="comment">// "blue" !!!</span></div><div class="line">colors; <span class="comment">// ["red", "green"]</span></div><div class="line"></div><div class="line"><span class="comment">// 模拟队列</span></div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>); <span class="comment">// 这里和模拟栈一样</span></div><div class="line">alert(count); <span class="comment">// 2</span></div><div class="line">colors; <span class="comment">// ["red", "green"]</span></div><div class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"blue"</span>);</div><div class="line">alert(count); <span class="comment">// 3</span></div><div class="line">colors; <span class="comment">// ["red", "green", "blue"] 至此还和栈一样</span></div><div class="line"><span class="keyword">var</span> item = colors.shift(); <span class="comment">// 从队首删除元素即数组的最前边，并返回该元素</span></div><div class="line">alert(item); <span class="comment">// "red" !!!</span></div><div class="line">colors; <span class="comment">// ["green", "blue"]</span></div></pre></td></tr></table></figure>
+<p>另外还有一个函数<strong>unshift()</strong>，在数组前端添加元素，并返回数组的长度。</p>
+<p>可以使用unshift()和pop()反向模拟队列。从队尾（数组后边）删除，从队首（数组前边）加入。</p>
+<p>可以使用unshift()和shfit模拟倒着的栈？</p>
+<p>这四个函数的关系：push() ~ unshift()；pop() ~ shift()</p>
+<h4 id="5-2-5-重排序方法"><a href="#5-2-5-重排序方法" class="headerlink" title="5.2.5 重排序方法"></a>5.2.5 重排序方法</h4><p>有两个方法，sort()和reverse()。</p>
+<ul>
+<li><p><strong>reverse()</strong>方法<br>只是将数组元素反转，并不管大小顺序。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line">values.reverse();</div><div class="line">alert(values); <span class="comment">// 5, 4, 3, 2, 1</span></div><div class="line">alert(values.reverse()); <span class="comment">// 返回值 排序后的数组 1, 2, 3, 4, 5</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>sort()</strong>方法</p>
+<blockquote>
+<p>sort()方法会调用每个数组项的toString()转型方法，然后比较得到的字符串，以确定如何排序。</p>
+</blockquote>
+<p>所以有时候并不是人们期望的结果。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</div><div class="line">values.sort();</div><div class="line">alert(values); <span class="comment">// 0, 1, 10, 15, 5</span></div><div class="line">alert(values.sort()); <span class="comment">// 返回值 排序后的数组 0, 1, 10, 15, 5</span></div></pre></td></tr></table></figure>
+<p>为了解决上述问题。sort()方法接收一个<strong>比较函数</strong>作为参数，以便指定排序规则。</p>
+<blockquote>
+<p><strong>比较函数</strong>接收两个参数，返回值可以是负数、0、正数。若是正数，则规定第一个参数在第二个参数之后；若是负数，则规定第一个参数在第二个参数之前。</p>
+</blockquote>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 升序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareUp</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 降序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareDown</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>];</div><div class="line">values.sort(compareUp);</div><div class="line">alert(values); <span class="comment">// 1,2,3,4,5</span></div><div class="line">values.sort(compareDown);</div><div class="line">alert(values); <span class="comment">// 5,4,3,2,1</span></div><div class="line"></div><div class="line"><span class="comment">// 更简单的方法，适合数值类型</span></div><div class="line"><span class="comment">// 升序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareUp2</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> value1 - value2;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 降序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareDown2</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> value2 - value1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-2-6-操作方法"><a href="#5-2-6-操作方法" class="headerlink" title="5.2.6 操作方法"></a>5.2.6 操作方法</h4><p>类似python中的切片。</p>
+<p>三个函数：concat()、slice()、splice()。concat–合并；slice–薄片、切开；splice–拼接</p>
+<ul>
+<li><p><strong>concat()</strong></p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> skills1 = [<span class="string">"code"</span>, <span class="string">"ps"</span>,<span class="string">"football"</span>];</div><div class="line"><span class="keyword">var</span> skills2 = skills1.concat(<span class="string">"dream"</span>,[<span class="string">"piebi"</span>, <span class="string">"kandan"</span>]);</div><div class="line"></div><div class="line">alert(skills1); <span class="comment">// code,ps,football</span></div><div class="line">alert(skills2); <span class="comment">// code,ps,football,dream,piebi,kandan</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>slice()</strong></p>
+<p>两种情况</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>, <span class="string">"white"</span>, <span class="string">"black"</span>];</div><div class="line"><span class="comment">// 情况1 只有一个参数</span></div><div class="line"><span class="keyword">var</span> colors1 = colors.slice(<span class="number">1</span>);</div><div class="line">alert(colors); <span class="comment">// red,blue,green,white,black</span></div><div class="line">alert(colors1); <span class="comment">// blue,green,white,black</span></div><div class="line"><span class="comment">// 情况2 有两个参数</span></div><div class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>, <span class="number">3</span>);</div><div class="line">alert(colors); <span class="comment">// red,blue,green,white,black</span></div><div class="line">alert(colors2); <span class="comment">// blue,green</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>splice()</strong><br>第一个参数：要删除的第一项的位置；第二个参数：要删除的项数；第三、四…个参数：要增加的项目。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</div><div class="line"><span class="comment">// 删除 只需指定前两个参数</span></div><div class="line"><span class="keyword">var</span> removed1 = colors.splice(<span class="number">0</span>, <span class="number">1</span>);</div><div class="line">alert(colors); <span class="comment">// green,blue</span></div><div class="line">alert(removed1); <span class="comment">// red</span></div><div class="line"></div><div class="line"><span class="comment">// 插入 即第二项 要删除的项数为0</span></div><div class="line"><span class="keyword">var</span> removed2 = colors.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">"yellow"</span>, <span class="string">"purple"</span>);</div><div class="line">alert(colors); <span class="comment">// green,yellow,purple,blue</span></div><div class="line">alert(removed2); <span class="comment">// []</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> removed3 = colors.splice(<span class="number">0</span>, <span class="number">0</span>, [<span class="string">"white"</span>, <span class="string">"black"</span>]);</div><div class="line">colors; <span class="comment">// [["white","black"],"green","yellow","purple","blue"]</span></div><div class="line">alert(colors); <span class="comment">// white,black,green,yellow,purple,blue</span></div><div class="line">alert(removed3); <span class="comment">// []</span></div><div class="line"></div><div class="line"><span class="comment">// 替换 需要三个参数</span></div><div class="line"><span class="keyword">var</span> removed4 = colors.splice(<span class="number">0</span>, <span class="number">1</span>, <span class="string">"orange"</span>);</div><div class="line"><span class="comment">// 注意！！！ 这里的第一个元素是一个数组,当成一个整体。</span></div><div class="line">colors; <span class="comment">// ["orange","green","yellow","purple","blue"] </span></div><div class="line">alert(removed4); <span class="comment">// white,black</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="5-2-7-位置方法"><a href="#5-2-7-位置方法" class="headerlink" title="5.2.7 位置方法"></a>5.2.7 位置方法</h4><p>两个函数：indexOf()和lastIndexOf()，一个从前往后，一个从后往前。</p>
+<p>两种情况。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>];</div><div class="line"><span class="comment">// 情况1 只有一个参数  表示要找的元素而不是索引位置</span></div><div class="line">alert(numbers.indexOf(<span class="number">3</span>)); <span class="comment">// 1 而不是 5</span></div><div class="line"><span class="comment">// 情况2 两个参数 第一个是要查找的元素，第二个是查找起点位置</span></div><div class="line">alert(numbers.indexOf(<span class="number">3</span>, <span class="number">0</span>)); <span class="comment">// 1</span></div><div class="line">alert(numbers.indexOf(<span class="number">3</span>, <span class="number">2</span>)); <span class="comment">// 6</span></div><div class="line">alert(numbers.indexOf(<span class="number">3</span>, <span class="number">7</span>)); <span class="comment">// -1 找不到了，不会再返回0号位置找</span></div></pre></td></tr></table></figure>
+<h4 id="5-2-8-迭代方法-amp-5-2-9-归并方法"><a href="#5-2-8-迭代方法-amp-5-2-9-归并方法" class="headerlink" title="5.2.8 迭代方法 &amp; 5.2.9 归并方法"></a>5.2.8 迭代方法 &amp; 5.2.9 归并方法</h4><p>好多函数：every()、filter()、forEach()、map()、some()和reduce()、reduceRight()。都不是很了解。。。都会接收一个函数参数？？？</p>
+<h3 id="5-3-Date类型"><a href="#5-3-Date类型" class="headerlink" title="5.3 Date类型"></a>5.3 Date类型</h3><p><strong>UTC</strong>(Coordinated Universal Time)和<strong>GMT</strong>(Greenwich Mean Time)的区别。GMT是时区(time zone)，UTC是时间标准(time standard)。更具体的参考<a href="https://www.timeanddate.com/time/gmt-utc-time.html" target="_blank" rel="external">这里</a>和<a href="http://pansci.asia/archives/84978" target="_blank" rel="external">这里</a>。</p>
+<p>Date类型使用自UTC，1970.1.1,00:00:00开始的<strong>毫秒数</strong>。</p>
+<ul>
+<li><p>创建方法</p>
+<ul>
+<li><p>使用 new Date()方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 不传参数 获取当前的日期时间</span></div><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">date; <span class="comment">// Thu Feb 23 2017 14:58:01 GMT+0800 (中国标准时间)</span></div><div class="line"><span class="comment">// 传递参数 需要传递想要时间的距离1970.1.1,00:00:00的毫秒数</span></div><div class="line"><span class="keyword">var</span> date1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">123456789</span>);</div><div class="line">date1; <span class="comment">// Fri Jan 02 1970 18:17:36 GMT+0800 (中国标准时间)</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>还是使用 new Date()方法，但参数更容易理解 Date.parse()和Date.UTC()</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 传递的是 表示日期的字符串参数 用Date.parse()处理</span></div><div class="line"><span class="keyword">var</span> date2 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.parse(<span class="string">"Feb 11, 2017"</span>)); <span class="comment">// 还有其他格式的日期。。。</span></div><div class="line">date2; <span class="comment">// Sat Feb 11 2017 00:00:00 GMT+0800 (中国标准时间)</span></div><div class="line"><span class="comment">// 传递的是 表示日期的数字 年 月 天 时 分 秒 毫秒</span></div><div class="line"><span class="keyword">var</span> date3 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.UTC(<span class="number">2017</span>, <span class="number">1</span>, <span class="number">11</span>, <span class="number">03</span>, <span class="number">35</span>)); <span class="comment">// 前两个参数 是必须的 后边的参数可以省略 默认0 月份是从0-11</span></div><div class="line">date3; <span class="comment">// Sat Feb 11 2017 11:35:00 GMT+0800 (中国标准时间) 注意这里想要的是凌晨3点，但是中国的标准时间是上午11点。这是基于GMT创建的，是GMT+0时区的时间，浏览器（或者说JS寄宿环境）会将其转换为本地的时间，中国是GMT+8。</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>其实上边的Date.parse()和Date.UTC()放法可以省略…有些许不同</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date4 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">"Feb,11,2017"</span>);</div><div class="line">date4; <span class="comment">// Sat Feb 11 2017 00:00:00 GMT+0800 (中国标准时间) 和之前完全一样</span></div><div class="line"><span class="keyword">var</span> date5 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">2017</span>, <span class="number">1</span>, <span class="number">11</span>, <span class="number">03</span>, <span class="number">35</span>);</div><div class="line">date5; <span class="comment">// Sat Feb 11 2017 03:35:00 GMT+0800 (中国标准时间) 注意这里时间就是凌晨3点了。这是基于本地时区创建的。与之前不同</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>做性能度量</strong> </p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> start = <span class="built_in">Date</span>.now(); <span class="comment">// 也可用 +new Date() 获取Date对象的时间戳？</span></div><div class="line">doSomething();</div><div class="line"><span class="keyword">var</span> stop = <span class="built_in">Date</span>.now(); <span class="comment">// 也可用 +new Date()</span></div><div class="line"><span class="keyword">var</span> cost = stop - start; <span class="comment">// 所用的毫秒数</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>继承的方法</p>
+<p>上边的数组也有这些 在<a href="#5.2.2">5.2.2</a> 转换方法中<br>toString()、toLocaleString()、valueOf()（返回日期的毫秒数）</p>
+</li>
+<li><p>日期格式化</p>
+<p>专门用于将日期格式化为字符串<br>toDateString()、toTimeString()、toLocaleDateString()、toLocaleTimeString()、toUTCString() 用的时候再看？不同浏览器或许还不同？</p>
+</li>
+<li><p>日期/时间组件方法</p>
+<p>  FullYear、Month、Date（天数 1-31）、Day（星期几 0日-6六）、Hours、Minutes、Seconds、Milliseconds（<strong>日期中的</strong>毫秒数）、Time（<strong>日期的</strong>毫秒数）、TimezoneOffset（？） 都有get、set方法，还有UTCXX。</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">date.getMilliseconds(); <span class="comment">// 118</span></div><div class="line">date.getTime(); <span class="comment">// 1487832517118</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;第5章-引用类型（一）（Object、Array、Date）&quot;&gt;&lt;a href=&quot;#第5章-引用类型（一）（Object、Array、Date）&quot; class=&quot;headerlink&quot; title=&quot;第5章 引用类型（一）（Object、Array、Date）&quot;&gt;&lt;/a&gt;第5章 引用类型（一）（Object、Array、Date）&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;引用类型&lt;/strong&gt;是一种数据结构，和其他面向对象语言中的&lt;strong&gt;类&lt;/strong&gt;很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型&lt;strong&gt;Object&lt;/strong&gt;，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，也有许多内置的&lt;strong&gt;原生引用类型&lt;/strong&gt;：Array、Date、RegExp、Function、基本包装类型、单体内置对象。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Android还踢球app总结（三）</title>
