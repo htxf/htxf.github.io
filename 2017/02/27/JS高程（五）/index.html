@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS高程（五） | Htxf-fxtH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）5.5 Function类型
+函数是对象。函数名实际上是一个指向对象的指针。
+
+函数的定义
+
+法一：函数声明
+法二：函数表达式
+法三：使用Function构造函数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS高程（五）">
+<meta property="og:url" content="http://yoursite.com/2017/02/27/JS高程（五）/index.html">
+<meta property="og:site_name" content="Htxf-fxtH">
+<meta property="og:description" content="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）5.5 Function类型
+函数是对象。函数名实际上是一个指向对象的指针。
+
+函数的定义
+
+法一：函数声明
+法二：函数表达式
+法三：使用Function构造函数">
+<meta property="og:updated_time" content="2017-02-27T14:02:06.602Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS高程（五）">
+<meta name="twitter:description" content="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）5.5 Function类型
+函数是对象。函数名实际上是一个指向对象的指针。
+
+函数的定义
+
+法一：函数声明
+法二：函数表达式
+法三：使用Function构造函数">
+  
+    <link rel="alternative" href="/atom.xml" title="Htxf-fxtH" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|">
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script type="text/javascript" src="http://code.jQuery.com/jquery-latest.js"></script>
+  <script src="/js/base.js"></script>
+  <script src="/js/jquery.cookie.js"></script>
+  <script src="/fancybox/jquery.fancybox.js"></script>
+  <script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({ 
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+}); 
+</script>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+    <div id="insert" class="home_logo"></div>
+    <div class="hamburger animated shake">
+      <i ></i>
+      <ul>
+        <li class="home"><a href="/">Home<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
+        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
+        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+      </ul>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div class="main_center"><article id="post-JS高程（五）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS高程（五）
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-02-27T06:00:42.000Z" itemprop="datePublished">Feb 27 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）"><a href="#第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）" class="headerlink" title="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）"></a>第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）</h2><h3 id="5-5-Function类型"><a href="#5-5-Function类型" class="headerlink" title="5.5 Function类型"></a>5.5 Function类型</h3><blockquote>
+<p>函数是对象。<br>函数名实际上是一个指向对象的指针。</p>
+</blockquote>
+<p><strong>函数的定义</strong></p>
+<ul>
+<li>法一：<strong>函数声明</strong></li>
+<li>法二：<strong>函数表达式</strong></li>
+<li>法三：使用Function构造函数</li>
+</ul>
+<a id="more"></a>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数声明语法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Hi"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 函数表达式 没有函数名，通过变量sayHi即可引用；函数末尾有分号，是"var sayHi = XXX;"中的分号</span></div><div class="line"><span class="comment">// 要执行函数时，应是sayHi()而不是sayHi</span></div><div class="line"><span class="keyword">var</span> sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Hi"</span>);</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 使用Function构造函数 不要用</span></div><div class="line"><span class="keyword">var</span> sayHi = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"name"</span>, <span class="string">"alert("</span>Hi<span class="string">" + name)"</span>);</div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><p>法一和法二，函数声明和函数表达式的异同。</p>
+<ul>
+<li>同：两者的sayHi都是指针，指向函数对象；执行函数时都是sayHi()，要加圆括号。</li>
+<li><p>异：解析器会率先读取函数声明，并在其执行任何代码之前可用。（<strong>函数声明提升</strong>function declaration hoisting）;函数表达式没有这个待遇。 </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数声明提升</span></div><div class="line">sayHi(<span class="string">"Dashuaibi"</span>); <span class="comment">// 没问题</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Hi "</span> + name + <span class="string">"!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 至于函数表达式</span></div><div class="line">sayHi2(<span class="string">"Dashuaibi"</span>); <span class="comment">// 发生错误！！！</span></div><div class="line"><span class="keyword">var</span> sayHi2 = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Hi "</span> + name + <span class="string">"!"</span>);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>函数没有重载</strong></p>
+<p>第3章也曾经讲过。其他语言中的函数重载是通过相同的函数名而不同的参数形成的，但在JS中，定义函数时并不真正的关心形参，它只是个便利，调用函数时想传递多少参数都可以，在函数内部通过<strong>arguments对象</strong>来访问具体传递的参数。所以真正的函数重载在JS中不可能实现。</p>
+<p>另一方面，函数是对象，函数名是指向栈内存对象的一个指针。如果连续定义了两个同名的不同函数体的函数A和函数B，相当于函数名从开始的指向栈内存函数A对象，变成了后来函数名指向栈内存函数B对象了。</p>
+<p><strong>函数作为值</strong></p>
+<ul>
+<li><p>情形1：函数作为参数。注意此时是传递someFunction，而不是传递someFunction()。前一篇<strong>数组排序问题</strong>时就用到了compare函数做参数。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 函数1</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">funAsArg1</span> (<span class="params">name</span>) </span>&#123;</div><div class="line">    alert(<span class="string">"Let's party, "</span> + name + <span class="string">"!"</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 函数2</span></div><div class="line"><span class="keyword">var</span> funAsArg2 = <span class="function"><span class="keyword">function</span> (<span class="params">curPro</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> end = <span class="number">100</span>; </div><div class="line">    alert(<span class="string">"还有百分之"</span> + (end - cuPro) + <span class="string">"了~"</span>);</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 用函数做参数的函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">callSomeFun</span> (<span class="params">someFun, someArg</span>) </span>&#123;</div><div class="line">    someFun(someArg);</div><div class="line">&#125; </div><div class="line"><span class="comment">// 调用函数 函数做参数 不要圆括号</span></div><div class="line">callSomeFun(funAsArg1, <span class="string">"DaShuaiBi"</span>);</div><div class="line">callSomeFun(funAsArg2, <span class="number">50</span>);</div><div class="line"><span class="comment">// 这次会弹出 Let's party, undefined! 但是callSomeFun中会出现错误，说someFun不是一个Function。总之和预想的不同</span></div><div class="line">callSomeFun(funAsArg1(), <span class="string">"DaShuaiBi"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>情形2：函数作为返回值。书中的例子还是比较好的。有个数据是对象数组，每个对象都有name和age，这样要对这个数组排序的话，可以按照name排也可以按照age排。<br>如果还是和上一次一样，compare函数的参数是两个值，之前数组中是两个数字，而现在则是两个对象，就不存在顺序了，而应该是对象的属性的值才对。</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 降序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareDown</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 升序</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareUp</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">// 数值数组</span></div><div class="line"><span class="keyword">var</span> numArr = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">4</span>];</div><div class="line">numArr.sort(compareDown); </div><div class="line">numArr; <span class="comment">// numArr 变成 5 4 3 2 1</span></div><div class="line">numArr.sort(compareUp); </div><div class="line">numArr; <span class="comment">// numArr变成 1 2 3 4 5</span></div><div class="line"><span class="comment">// 对象数组</span></div><div class="line"><span class="keyword">var</span> data = [&#123;<span class="attr">name</span>: <span class="string">"Zachary"</span>, <span class="attr">age</span>: <span class="number">28</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">"Nicholas"</span>, <span class="attr">age</span> : <span class="number">29</span>&#125;];</div><div class="line">data.sort(compareDown); </div><div class="line">data; <span class="comment">// data 不变</span></div><div class="line">data.sort(compareUp);</div><div class="line">data; <span class="comment">// data 不变</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 函数作为返回值，多传递一个参数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compareObjectArray</span>(<span class="params">propertyName</span>) </span>&#123;</div><div class="line">    <span class="comment">// 这个函数是返回一个比较函数，比较函数可以用到对象的属性名了</span></div><div class="line">    <span class="comment">// 这里compare函数的两个参数就成了对象，而不是values了。虽然只是个形参。</span></div><div class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">object1, object2</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> value1 = object1[propertyName]; <span class="comment">// 可以用.方法吗？ 不可以。</span></div><div class="line">        <span class="keyword">var</span> value2 = object2[propertyName]; <span class="comment">// 可以用.方法吗？ 不可以</span></div><div class="line">        <span class="comment">// 升序的</span></div><div class="line">        <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (vale1 &lt; value2) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            retrun <span class="number">0</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">data.sort(compareObjectArray(<span class="string">"name"</span>)); <span class="comment">// 为什么传"name"，而不是name呢？函数中用的是[]法，不是.法访问属性值。而且name是个变量名，并没有在哪儿定义。</span></div><div class="line">data[<span class="number">0</span>]; <span class="comment">// Object &#123;name: "Nicholas", age: 29&#125;</span></div><div class="line">data.sort(compareObjectArray(<span class="string">"age"</span>));</div><div class="line">data[<span class="number">0</span>]; <span class="comment">// Object &#123;name: "Zachary", age: 28&#125;</span></div></pre></td></tr></table></figure>
+<p>还有疑问说对于对象数组的排序多了一个参数（属性名），那在写compare比较函数时直接传递不行吗？可是貌似就不行。。compare只有参数，就是要比较的东西吧。那在写sort排序函数时传递行吗？即使可以传，它再怎样传递给compare呢？所以还是上边的方法可以解决问题。将compare函数作为返回值，传递给sort函数，而所需的属性名参数通过外层函数传递给compare函数（不算是传递给compare函数，应该说是compare可以使用该属性名参数）。</p>
+</li>
+</ul>
+<p><strong>函数的属性和方法</strong> ！@#%&amp;……&amp;%#@！</p>
+<p> 函数是对象，是对象就是有属性和方法。这些属性和方法没有闹明白……不知在何时用？？？也挺绕的……</p>
+<ul>
+<li>函数内部的对象arguments的属性<strong>callee</strong><blockquote>
+<p>callee是一个指针，指向拥有这个arguments对象的函数。</p>
+</blockquote>
+</li>
+<li><p>函数内部的对象<strong>this</strong></p>
+<blockquote>
+<p>this引用的是函数据以执行的<strong>环境对象</strong>，或者说是this值。</p>
+</blockquote>
+<p> 那什么是环境对象呢？在第4章 <em>执行环境及作用域</em> 一节中，有<strong>执行环境</strong>、<strong>变量对象</strong>、<strong>活动对象</strong>、<strong>作用域链</strong>。 </p>
+</li>
+<li>函数对象的属性<strong>caller</strong><blockquote>
+<p>caller中保存着调用当前函数的函数的引用。</p>
+</blockquote>
+</li>
+<li><strong>length</strong>属性<blockquote>
+<p>length属性表示函数希望接收的命名参数（形参？）的个数。</p>
+</blockquote>
+</li>
+<li><strong>prototype</strong>属性<blockquote>
+<p>prototype中保存了引用类型的所有实例方法。</p>
+</blockquote>
+</li>
+<li><span id="apply"><strong>apply()</strong>方法和<strong>call()</strong>方法</span><blockquote>
+<p>两者都是在特殊作用域中调用函数，等于设置函数体的this（对象）值。<br>可以扩充函数赖以运行的作用域。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="5-6-基本包装类型"><a href="#5-6-基本包装类型" class="headerlink" title="5.6 基本包装类型"></a>5.6 基本包装类型</h3><p>基本包装类型有三个：Boolean、Number和String。</p>
+<p>基本包装类型本质上是对象。但我们知道JS有五种<strong>基本数据类型</strong>，Undefined、Null、Boolean、Number和String，一种<strong>复杂数据类型</strong>，Object。所以Boolean、Number和String三者比较特殊，它们既有基本类型的特殊行为，也有引用类型的特点，即有属性、有方法。</p>
+<p><strong>基本类型值</strong>不是对象，它们不应该有方法，但它们真的有……比如下边的substring()方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s1 = <span class="string">"HeiHei, Jian Gui le."</span>;</div><div class="line"><span class="keyword">var</span> s2 = s1.substring(<span class="number">3</span>);</div><div class="line">s2; <span class="comment">//</span></div></pre></td></tr></table></figure></p>
+<p>这是因为：</p>
+<blockquote>
+<p>每当读取一个基本类型值的时候，后台就会创建一个对应的基本包装类型的对象，从而能够调用一些方法来操作这些数据。</p>
+</blockquote>
+<p>那<strong>基本包装类型</strong>和<strong>引用类型</strong>的<strong>区别</strong>是什么？区别在于<strong>对象的生存期</strong>。</p>
+<blockquote>
+<p>引用类型的实例只要执行操作还没离开作用域，它就一直活在内存中。<br>自动创建的基本包装类型的对象，只存在于一行代码的执行瞬间。</p>
+</blockquote>
+<p>既然Boolean、Number和String是基本包装类型，是特殊的引用类型，就可以<strong>显式地</strong>用new来创建对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="number">250</span>;</div><div class="line">num.name = <span class="string">"sb"</span>;</div><div class="line">alert(num.name); <span class="comment">// undefined 为什么呢？基本包装类型的对象只存在于一行代码的执行瞬间。</span></div><div class="line"><span class="comment">// 显式地创建基本包装类型 这样与上边的情况就不同了。</span></div><div class="line"><span class="keyword">var</span> numObj = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">250</span>);</div><div class="line">numObj; <span class="comment">// Number &#123;[[PrimitiveValue]]: 250&#125;</span></div><div class="line">alert(numObj); <span class="comment">// 250</span></div><div class="line"><span class="comment">// 此时numObj还可以添加属性、方法</span></div><div class="line">numObj.name = <span class="string">"SB"</span>;</div><div class="line">numObj; <span class="comment">// Number &#123;name: "SB", [[PrimitiveValue]]: 250&#125;</span></div><div class="line">alert(numObj); <span class="comment">// 但这块儿还是 250</span></div><div class="line"><span class="comment">// 如果是</span></div><div class="line"><span class="keyword">var</span> ob = &#123;<span class="attr">name</span>: <span class="string">"SB"</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;;</div><div class="line">alert(ob); <span class="comment">// [object Object]</span></div></pre></td></tr></table></figure></p>
+<h4 id="5-6-1-Boolean类型"><a href="#5-6-1-Boolean类型" class="headerlink" title="5.6.1 Boolean类型"></a>5.6.1 Boolean类型</h4><blockquote>
+<p>永远不要使用Boolean对象！！！</p>
+</blockquote>
+<p>比如<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> falseObject = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line">alert(falseObject); <span class="comment">// false 与预想相同</span></div><div class="line"><span class="keyword">var</span> result1 = falseObject &amp;&amp; <span class="literal">true</span>;</div><div class="line">result1; <span class="comment">// true 与预想不同 falseObject &amp;&amp; true做布尔运算，实际上是一个对象和true做&amp;&amp;，对象会被转化为true，本质上是true&amp;&amp;true。</span></div><div class="line"><span class="keyword">var</span> falseValue = <span class="literal">false</span>;</div><div class="line"><span class="keyword">var</span> result2 = <span class="literal">false</span> &amp;&amp; <span class="literal">true</span>;</div><div class="line">result2; <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<h4 id="5-6-2-Number类型"><a href="#5-6-2-Number类型" class="headerlink" title="5.6.2 Number类型"></a>5.6.2 Number类型</h4><p><strong>toFixed()</strong>，参数是指定的小数位，四舍五入<br><strong>toExponential()</strong>，参数也是指定的小数位，用科学计数法（e表示法）做返回值<br><strong>toPrecision()</strong>，以上两者的综合，自动选择合适的表达，不一定是四舍五入了</p>
+<blockquote>
+<p>不建议直接实例化Number类型！！！</p>
+</blockquote>
+<p>原因同Boolean包装类型。</p>
+<h4 id="5-6-3-String类型"><a href="#5-6-3-String类型" class="headerlink" title="5.6.3 String类型"></a>5.6.3 String类型</h4><ul>
+<li><p><strong>length属性</strong></p>
+<blockquote>
+<p>返回字符串包含多少个字符。<br>占双字节的字符，每个字符也只算一个字符。</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>charAt()方法</strong>、<strong>charCodeAt()方法</strong>、<strong>fromeCharCode()方法</strong><br>前两个方法接收基于0的字符位置，最后一个方法接收一个或多个字符编码。<br>第一个方法返回该位置的字符，第二个方法返回该位置的字符相应的字符编码，第三个方法返回字符编码相应的字符。</p>
+</li>
+<li><p><strong>concat()方法</strong>、<strong>slice()方法</strong>、<strong>substr()方法</strong>、<strong>substring()方法</strong><br>第一个方法用来拼接字符串。在Array类型中也有。不常用，都用+。后三个方法用来切割字符串。slice()在Array类型中也有。<br>但是很麻烦……！@#%&amp;……&amp;%#@！</p>
+</li>
+<li><p><strong>indexOf()方法</strong>、<strong>lastIndexOf()方法</strong><br>和Array类型中的一样。接收一个给定的子字符串，返回相应位置。<br>书中有个例子，在一个句子中<strong>找到所有匹配的子字符串的位置</strong>。自己写一下，现在，就现在！！！</p>
+</li>
+<li><p><strong>trim()方法</strong></p>
+<blockquote>
+<p>创建一个字符串副本，删除前置及后缀的所有空格，然后返回结果。</p>
+</blockquote>
+</li>
+<li><p><strong>toLowerCase()方法</strong>、<strong>toUpperCase()方法</strong>、<strong>toLocaleLowerCase()方法</strong>、<strong>toLocaleUpperCase()方法</strong><br> 比较简单。还要看一些<strong>字符编码</strong>的知识。这一下小节中length、charCodeAt()、还有这里都用到了。</p>
+</li>
+<li><p><strong>localeCompare()方法</strong><br>比较两个字符串的排序情况。xxx.localeCompare(XXX);<br>这个和之前数组Array的排序sort，用的compare比较函数很类似。value1在value2之前，返回-1；value1在value2之后，返回1；两者一样，返回0。xxx相当于value1，XXX相当于value2。</p>
+</li>
+<li><p><strong>HTML()方法</strong></p>
+<blockquote>
+<p>尽量不要使用</p>
+</blockquote>
+</li>
+<li><p>字符串的模式匹配方法 正则表达式 ！@#%&amp;……&amp;%#@！</p>
+</li>
+</ul>
+<h4 id="5-7-单体内置对象"><a href="#5-7-单体内置对象" class="headerlink" title="5.7 单体内置对象"></a>5.7 单体内置对象</h4><p>内置对象：</p>
+<blockquote>
+<p>由ECMAScript实现提供的、不依赖于宿主环境的对象，这些对象在ECMAScript程序执行之前就已经存在了。<br>不必显式地实例化内置对象，因为已经实例化了。如Object、Array、String。 </p>
+</blockquote>
+<p>单体内置对象：单体？？？</p>
+<ul>
+<li><p><strong>Global对象</strong></p>
+<blockquote>
+<p>这个对象不存在……WTF…；<br>不属于任何其他对象的属性和方法，最终属于Global对象；<br>在全局作用域定义的属性和函数，都属于Global对象。diao的1比</p>
+</blockquote>
+<ul>
+<li>encodeURI()和encodeURIComponent()、decodeURI()和decodeURIComponent()<br>处理URI(Uniform Resource Identifiers)通用（统一）资源标识符的。<br>接收URI字符串做参数。<br><strong>有效的URI中不能包含空格！！！</strong><br>encodeURI能将空格编码成%20，（UTF-8）。<br>encodeURIComponent还能对任何<strong>非标准字符</strong>（如 : / ? #）进行编码，而encodeURI不行。</li>
+<li><p>eval()方法 python中也有eval()函数。但具体的用法不清楚……<br>JS中的eval()接收一个参数，要执行的JS字符串。但有什么用呢？？？</p>
+</li>
+<li><p>Global对象的属性<br>好多。</p>
+</li>
+<li>window对象<br>不知怎样访问Global对象，但在Web浏览器中，会把Global对象作为window对象的一部分加以实现。所以是Global的都成了window的了。</li>
+</ul>
+</li>
+<li><p><strong>Math对象</strong></p>
+<ul>
+<li><p>Math对象的属性<br>如：Math.E、Math.PI（π）……</p>
+</li>
+<li><p>min()和max()函数<br>接收多个数值做参数。但是不能接收一个数组！！!</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(<span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>);</div><div class="line">alert(max); <span class="comment">// 8</span></div><div class="line"><span class="keyword">var</span> values = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>];</div><div class="line"><span class="keyword">var</span> max2 = <span class="built_in">Math</span>.max(values);</div><div class="line">alert(max2); <span class="comment">// NaN !!!</span></div></pre></td></tr></table></figure>
+<p>书中有一个技巧。应用了 <em>函数的属性和方法</em> 中的<a href="#apply">apply()</a>方法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> values = [<span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">7</span>];</div><div class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values); apply的第一个参数设置了<span class="keyword">this</span>值为<span class="built_in">Math</span>，第二个参数可以是数组。？？？还是不懂。</div><div class="line">alert(max); <span class="comment">// 8</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>ceil()、floor()、round()方法<br> 分别是向上舍入、向下舍入、四舍五入</p>
+</li>
+<li><p>random()方法</p>
+<blockquote>
+<p>Math.random()方法返回<strong>大于等于0小于1</strong>的一个随机数。</p>
+</blockquote>
+<p> 书中有一个公式利用Math.random()<strong>从某个整数范围内</strong>随机选择一个值。是什么？？？自己写！！！就现在！！！<br> 还有一中情况，告诉你最小值和最大值，怎样随机取其范围中的某个整数值？？？</p>
+</li>
+</ul>
+<h4 id="上边两个问题的代码"><a href="#上边两个问题的代码" class="headerlink" title="!!上边两个问题的代码!!"></a>!!上边两个问题的代码!!</h4><h5 id="1-找到所有匹配的子字符串。"><a href="#1-找到所有匹配的子字符串。" class="headerlink" title="1. 找到所有匹配的子字符串。"></a>1. 找到所有匹配的子字符串。</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hw = <span class="string">"A \"Hello, World!\" program is a computer program that outputs or displays \"Hello, World!\" to the user. "</span>;</div><div class="line"><span class="comment">// 错误！！！ 死循环了，浏览器崩溃了！？</span></div><div class="line"><span class="keyword">var</span> position = [];</div><div class="line"><span class="keyword">var</span> pos = hw.indexOf(<span class="string">"e"</span>);</div><div class="line">position.push(pos);</div><div class="line"><span class="keyword">for</span> (pos = pos + <span class="number">1</span>; pos &gt; <span class="number">-1</span>; pos++) &#123;</div><div class="line">    pos = hw.indexOf(<span class="string">"e"</span>, pos);</div><div class="line">    position.push(pos);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 改成 pos++ 和indexOf中换了下 就对了？？ 感觉一样啊</span></div><div class="line"><span class="comment">// 不过最后还多一个 -1</span></div><div class="line"><span class="keyword">var</span> position = [];</div><div class="line"><span class="keyword">var</span> pos = hw.indexOf(<span class="string">"e"</span>);</div><div class="line">position.push(pos);</div><div class="line"><span class="keyword">for</span> (pos = pos + <span class="number">1</span>; pos &gt; <span class="number">-1</span>;) &#123;</div><div class="line">    pos = hw.indexOf(<span class="string">"e"</span>, pos + <span class="number">1</span>);</div><div class="line">    position.push(pos);</div><div class="line">&#125;</div><div class="line">position; <span class="comment">// [4, 37, 75, 94, 98, -1]</span></div><div class="line"></div><div class="line"><span class="comment">// 书中做法</span></div><div class="line"><span class="keyword">var</span> position = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"><span class="keyword">var</span> pos = hw.indexOf(<span class="string">"e"</span>);</div><div class="line"></div><div class="line"><span class="keyword">while</span>(pos &gt; <span class="number">1</span>)&#123;</div><div class="line">    position.push(pos);</div><div class="line">    pos = hw.indexOf(<span class="string">"e"</span>, pos + <span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">position; <span class="comment">// [4, 37, 75, 94, 98]</span></div></pre></td></tr></table></figure>
+<h5 id="2-从某个整数范围内随机选择一个值"><a href="#2-从某个整数范围内随机选择一个值" class="headerlink" title="2. 从某个整数范围内随机选择一个值"></a>2. 从某个整数范围内随机选择一个值</h5><blockquote>
+<p><strong>整数随机值 = Math.floor(Math.random() * 可能值的总数 + 第一个可能的值 )</strong></p>
+</blockquote>
+<p>反推：<br>s &lt;= XXX &lt; N + s<br>0 &lt;= XXX -s &lt; N<br>0 &lt;= (XXX - s) / N &lt; 1<br>则 ((XXX - s) / N) = Math.random()，推出XXX = Math.random() * N + s<br>这样 s &lt; XXX &lt; N + s<br>刚好<strong>向下取整</strong>就可以取到s和最大值N+S-1了。</p>
+<p>另一种：<br>lowValue &lt;= XXX &lt;= upValue<br>0 &lt;= XXX - lowValue &lt;= upValue - lowValue<br>0 &lt;= (XXX - lowValue) / (upValue - lowValue) &lt;= 1<br>则 (XXX - lowValue) / (upValue - lowValue) = Math.random()，推出XXX = (upValue - lowValue) * Math.random() + lowValue<br>但这样下来<br>lowValue &lt; XXX &lt; upValue<br>取不到最小值和最大值，<strong>向下取整</strong>或<strong>向上取整</strong>只能解决一半问题。</p>
+<p>设m大于0小于1，则<br>lowValue + m &lt; XXX &lt; upValue + m<br>然后两边都<strong>向下取整</strong>，才可以使得XXX取到lowValue和upValue。<br>又m就是Math.random()，所以开始时<br>lowValue &lt; XXX - Math.random()&lt; upValue<br>……<br>XXX = (upValue - lowValue + 1) * Math.random() + lowValue<br>所以：<br><strong> 整数随机值 = Math.floor((最大值 - 最小值 + 1) * Math.random() + 最小值) </strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 已知最大值和最小值，取一个区间内的整数</span></div><div class="line"><span class="keyword">var</span> start = <span class="built_in">Date</span>.now();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">creatRanIntNum</span>(<span class="params">lowerValue, upperValue</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.floor((upperValue - lowerValue + <span class="number">1</span>) * <span class="built_in">Math</span>.random() + lowerValue);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> ranNums1 = [];</div><div class="line"><span class="keyword">var</span> ranNums2 = [];</div><div class="line"><span class="keyword">var</span> ranNums3 = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">100</span>; i++) &#123;</div><div class="line">    ranNums1.push(creatRanIntNum(<span class="number">1</span>, <span class="number">9</span>));</div><div class="line">    ranNums2.push(creatRanIntNum(<span class="number">10</span>, <span class="number">16</span>));</div><div class="line">    ranNums3.push(creatRanIntNum(<span class="number">0</span>, <span class="number">50</span>));</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> stop = <span class="built_in">Date</span>.now();</div><div class="line">alert(<span class="string">"花了"</span> + (stop - start) + <span class="string">"ms"</span> ); <span class="comment">// 有时候是0ms...加大随机个数到10000，差不多10ms左右</span></div><div class="line"><span class="comment">// var start = Date.now(); 这一句应该写在哪儿呢？？</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/23/TensorFlow学习笔记（一）/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</div>
+</section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
