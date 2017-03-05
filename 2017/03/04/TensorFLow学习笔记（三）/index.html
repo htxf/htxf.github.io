@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>TensorFLow学习笔记（三） | Htxf-fxtH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="官方文档第三篇。Deep MNIST for Experts
+这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。
+整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TensorFLow学习笔记（三）">
+<meta property="og:url" content="http://yoursite.com/2017/03/04/TensorFLow学习笔记（三）/index.html">
+<meta property="og:site_name" content="Htxf-fxtH">
+<meta property="og:description" content="官方文档第三篇。Deep MNIST for Experts
+这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。
+整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + D">
+<meta property="og:image" content="http://yoursite.com/..\TensorFLow学习笔记（三）\first-conv-pool.jpg">
+<meta property="og:image" content="http://yoursite.com/..\TensorFLow学习笔记（三）\second-conv-pool.jpg">
+<meta property="og:image" content="http://yoursite.com/..\TensorFLow学习笔记（三）\full-connect.jpg">
+<meta property="og:image" content="http://yoursite.com/..\TensorFLow学习笔记（三）\final.jpg">
+<meta property="og:updated_time" content="2017-03-05T06:52:26.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TensorFLow学习笔记（三）">
+<meta name="twitter:description" content="官方文档第三篇。Deep MNIST for Experts
+这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。
+整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + D">
+<meta name="twitter:image" content="http://yoursite.com/..\TensorFLow学习笔记（三）\first-conv-pool.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="Htxf-fxtH" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans|">
+  <link href='https://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script type="text/javascript" src="http://code.jQuery.com/jquery-latest.js"></script>
+  <script src="/js/base.js"></script>
+  <script src="/js/jquery.cookie.js"></script>
+  <script src="/fancybox/jquery.fancybox.js"></script>
+  <script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({ 
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} 
+}); 
+</script>
+<script type="text/javascript"
+   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+</head>
+
+
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+    <div id="insert" class="home_logo"></div>
+    <div class="hamburger animated shake">
+      <i ></i>
+      <ul>
+        <li class="home"><a href="/">Home<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
+        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
+        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+      </ul>
+    </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><div class="main_center"><article id="post-TensorFLow学习笔记（三）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      TensorFLow学习笔记（三）
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-04T12:35:50.000Z" itemprop="datePublished">Mar 4 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>官方文档第三篇。<a href="https://www.tensorflow.org/get_started/mnist/pros" target="_blank" rel="external">Deep MNIST for Experts</a></p>
+<p>这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。</p>
+<p>整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + Dropout层 + softmax回归。</p>
+<a id="more"></a>
+<h3 id="1-定义函数"><a href="#1-定义函数" class="headerlink" title="1. 定义函数"></a>1. 定义函数</h3><p>为了之后使用方便，定义了几个函数，方便地使用权值、偏差及方便地构建卷积层、池化层。</p>
+<p>输入想要的权值和偏差的tensor的shape形状就能获得想要的权值和偏差。权值开始时是一些随机数，满足正态分布，有少量的标准差，为了防止梯度为0（to prevent 0 gradients）？？？至于偏差，之后要使用<a href="https://en.wikipedia.org/wiki/Rectifier_(neural_networks" target="_blank" rel="external">ReLU</a>激活函数，为了不产生“dead neurons”,初始值是很小的正数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">weight_variable</span><span class="params">(shape)</span>:</span></div><div class="line">  initial = tf.truncated_normal(shape, stddev=<span class="number">0.1</span>)</div><div class="line">  <span class="keyword">return</span> tf.Variable(initial)</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">bias_variable</span><span class="params">(shape)</span>:</span></div><div class="line">  initial = tf.constant(<span class="number">0.1</span>, shape=shape)</div><div class="line">  <span class="keyword">return</span> tf.Variable(initial)</div></pre></td></tr></table></figure></p>
+<p>提供想要被卷积的数据及相应的权值就可以获得相应的卷积层；提供想要被池化的数据就可以获得相应的池化层。卷积时要知道一些超参数的设置，padding是多少？stride是多少？池化时要知道选择的是什么样的方法，平均池化？最大池化？在多大的区块池化？这里两层的卷积和池化都是选择的vanilla version。padding是SAME，stride是1，在2x2的区块上最大池化。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// conv--Convolutional <span class="number">2</span>d代表什么？<span class="number">2</span>维？</div><div class="line">// tf.nn.conv2d strides这四个值怎样理解？stride取<span class="number">2</span>时怎么写？</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">conv2d</span><span class="params">(x, W)</span>:</span></div><div class="line">  <span class="keyword">return</span> tf.nn.conv2d(x, W, strides=[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>)</div><div class="line">// tf.nn.max_pool 这几个参数怎样理解？</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_pool_2x2</span><span class="params">(x)</span>:</span></div><div class="line">  <span class="keyword">return</span> tf.nn.max_pool(x, ksize=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>],</div><div class="line">                        strides=[<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>], padding=<span class="string">'SAME'</span>)</div></pre></td></tr></table></figure>
+<h3 id="2-第一层卷积、池化"><a href="#2-第一层卷积、池化" class="headerlink" title="2. 第一层卷积、池化"></a>2. 第一层卷积、池化</h3><p>输入到网络中的数据是28x28=784个数字，要对其进行卷积时先要把它再转变成28x28的格式。28宽，28高，1个通道（灰度图）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">// <span class="number">-1</span>代表什么？</div><div class="line">x_image = tf.reshape(x, [<span class="number">-1</span>,<span class="number">28</span>,<span class="number">28</span>,<span class="number">1</span>])</div></pre></td></tr></table></figure>
+<p>卷积神经网络的原理是什么？人看一张图片时，是根据一小块儿一小块儿的图组合起来看。卷积神经网络就模拟这个过程，扫描图片上一小块儿一小块儿的区域，然后对这些信息进行加工（不同的权值、不同的组合），抽象出一些新的信息来代表这张图。人们对这些信息到底是代表着图片中的什么东西并不知道（也并不关心）。反正可以使用这些信息很好的代表这张图片。但这些信息，量还有点大，经过池化，可以用更少的信息来表示。可以进行这样好几次卷积、池化，反正最后就是将图片抽象成了一些信息。对每张图片都进行这样同样的操作，就可以用得到的信息去做图片的分类、识别等工作了。这只是粗浅的解释，还有统计不变性、权值共享等概念。<a href="https://classroom.udacity.com/courses/ud730/lessons/6377263405/concepts/63741833610923#" target="_blank" rel="external">Udacity</a>上有很好的解释。</p>
+<p>具体到这篇教程，第一层卷积时从每5x5的patch中提取、组合32个特征；池化时从每2x2的block中选取一个最大的做代表。第一层的卷积、池化过程大概如下图所示。</p>
+<p><img src="..\TensorFLow学习笔记（三）\first-conv-pool.jpg" width="100%" height="100%"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 先定义权值，<span class="number">5</span> <span class="number">5</span> 是patch的大小，<span class="number">1</span>是输入的通道数，<span class="number">32</span>是输入的通道数</div><div class="line">W_conv1 = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">1</span>, <span class="number">32</span>])</div><div class="line">// 每个输出的通道加一个偏置</div><div class="line">b_conv1 = bias_variable([<span class="number">32</span>])</div><div class="line">// 卷积层 relu只是激活函数 h_conv1代表<span class="number">28</span>x28x32个数 根据上边的x_image，它的shape应该是[<span class="number">-1</span> <span class="number">28</span> <span class="number">28</span> <span class="number">32</span>]  </div><div class="line">h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)</div><div class="line">// 池化层 h_pool1的shape应该是[<span class="number">-1</span> <span class="number">14</span> <span class="number">14</span> <span class="number">32</span>]</div><div class="line">h_pool1 = max_pool_2x2(h_conv1)</div></pre></td></tr></table></figure>
+<h3 id="3-第二层卷积、池化"><a href="#3-第二层卷积、池化" class="headerlink" title="3. 第二层卷积、池化"></a>3. 第二层卷积、池化</h3><p>第二层以第一层的输出h_pool1做输入，这一次卷积时从5x5的patch中提取、组合64个特征；池化时仍是从2x2的block中选取最大的做代表。其过程如下图所示。</p>
+<p><img src="..\TensorFLow学习笔记（三）\second-conv-pool.jpg" width="100%" height="100%"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">// 权值</div><div class="line">W_conv2 = weight_variable([<span class="number">5</span>, <span class="number">5</span>, <span class="number">32</span>, <span class="number">64</span>])</div><div class="line">// 偏置</div><div class="line">b_conv2 = bias_variable([<span class="number">64</span>])</div><div class="line">// 卷积</div><div class="line">h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)</div><div class="line">// 池化</div><div class="line">h_pool2 = max_pool_2x2(h_conv2)</div></pre></td></tr></table></figure>
+<h3 id="4-全连接层"><a href="#4-全连接层" class="headerlink" title="4. 全连接层"></a>4. 全连接层</h3><p>全连接层以第二层的输出做输入，这一次是从7x7x64=3136个数中，提取1024个数来作为代表。</p>
+<p><img src="..\TensorFLow学习笔记（三）\full-connect.jpg" width="30%" height="30%"></p>
+<p>代码和之前的线性模型很像，外层再加上ReLU激活函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 权值的shape是[<span class="number">3136</span>, <span class="number">1024</span>] 即有<span class="number">3136</span>个输入 <span class="number">1024</span>个输出</div><div class="line">W_fc1 = weight_variable([<span class="number">7</span> * <span class="number">7</span> * <span class="number">64</span>, <span class="number">1024</span>])</div><div class="line">b_fc1 = bias_variable([<span class="number">1024</span>])</div><div class="line">// 这一步是将第二层卷积池化的输出<span class="number">7</span>x7x64展平为<span class="number">3136</span>个数</div><div class="line">h_pool2_flat = tf.reshape(h_pool2, [<span class="number">-1</span>, <span class="number">7</span>*<span class="number">7</span>*<span class="number">64</span>])</div><div class="line">// 与之前的线性模型类似，外边再加上ReLU激活函数</div><div class="line">h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)</div></pre></td></tr></table></figure></p>
+<h3 id="5-Dropout层"><a href="#5-Dropout层" class="headerlink" title="5. Dropout层"></a>5. Dropout层</h3><p>Dropout的原理？它可以防止模型的过拟合（在训练集上表现很好，而再未知的数据集上表现不好）。大概就是在训练过程中，丢掉一些已经学习到的知识。这个教程中，先设置了一个placeholder，存放要保留的知识的百分比，这样在训练过程中可以保证一定的dropout，在测试过程中可以将其设置为100%来取消dropout。</p>
+<p>这一层的输入是上一层全连接层的输出。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">keep_prob = tf.placeholder(tf.float32)</div><div class="line">h_fc1_drop = tf.nn.dropout(h_fc1, keep_prob)</div></pre></td></tr></table></figure></p>
+<h3 id="6-softmax回归"><a href="#6-softmax回归" class="headerlink" title="6. softmax回归"></a>6. softmax回归</h3><p>根据Dropout层的输出，1024个数（特征），来产生10个类别的evidence，然后再应用softmax函数将evidence转化为相应的概率。教程中这一步只是简单的应用线性模型产生了10个evidence，而softmax的应用放到了计算损失——交叉熵中了。</p>
+<p><img src="..\TensorFLow学习笔记（三）\final.jpg" width="30%" height="30%"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 权值的shape是[<span class="number">1024</span>, <span class="number">10</span>] 即<span class="number">1024</span>个输入 <span class="number">10</span>个输出</div><div class="line">W_fc2 = weight_variable([<span class="number">1024</span>, <span class="number">10</span>])</div><div class="line">b_fc2 = bias_variable([<span class="number">10</span>])</div><div class="line">// 线性模型</div><div class="line">y_conv = tf.matmul(h_fc1_drop, W_fc2) + b_fc2</div></pre></td></tr></table></figure>
+<h3 id="7-训练、验证模型"><a href="#7-训练、验证模型" class="headerlink" title="7. 训练、验证模型"></a>7. 训练、验证模型</h3><p>剩下的工作和之前一篇的就差不多一样了。算出损失<strong>交叉熵</strong>，这次使用了<strong>AdamOptimizer优化器</strong>，使得损失减小。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">// 交叉熵的算法和上一篇不同</div><div class="line">cross_entropy = tf.reduce_mean(</div><div class="line">    tf.nn.softmax_cross_entropy_with_logits(labels=y_, logits=y_conv))</div><div class="line">// 训练过程 沿着AdamOptimizer的方向 使得损失越来越小</div><div class="line">train_step = tf.train.AdamOptimizer(<span class="number">1e-4</span>).minimize(cross_entropy)</div></pre></td></tr></table></figure></p>
+<p>模型预测的准确度的计算方法和上一篇一样。然后初始化变量。之后一共训练20000次，每次取50个样本数据进行训练，每次都丢弃一半已学到的知识；每训练一百次输出一次此时模型对于训练数据预测的准确度，此时不用dropout。最后在测试集上验证模型的预测准确率，不用dropout。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">// 预测准确度的计算</div><div class="line">correct_prediction = tf.equal(tf.argmax(y_conv, <span class="number">1</span>), tf.argmax(y_, <span class="number">1</span>))</div><div class="line">accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))</div><div class="line">// 设置会话Session  Session和InteractiveSession的区别？？？</div><div class="line">sess = tf.InteractiveSession()</div><div class="line">// 初始化变量</div><div class="line">sess.run(tf.global_variables_initializer())</div><div class="line">// 训练模型</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">20000</span>):</div><div class="line">    batch = mnist.train.next_batch(<span class="number">50</span>)</div><div class="line">    // 每一百次 输出一次此时模型对于训练集的预测准确率</div><div class="line">    <span class="keyword">if</span> i % <span class="number">100</span> == <span class="number">0</span>:</div><div class="line">        train_accuracy = accuracy.eval(</div><div class="line">            feed_dict=&#123;x: batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">1.0</span>&#125;)</div><div class="line">        print(<span class="string">"step %d, train accuracy %g"</span> % (i, train_accuracy))</div><div class="line">    train_step.run(feed_dict=&#123;x: batch[<span class="number">0</span>], y_: batch[<span class="number">1</span>], keep_prob: <span class="number">0.5</span>&#125;)</div><div class="line">// 最后输出模型在测试集上预测的准确率</div><div class="line">print(<span class="string">"test accuracy %g"</span> % accuracy.eval(</div><div class="line">    feed_dict=&#123;x: mnist.test.images, y_: mnist.test.labels, keep_prob: <span class="number">1.0</span>&#125;))</div></pre></td></tr></table></figure></p>
+<h3 id="8-底层知识"><a href="#8-底层知识" class="headerlink" title="8. 底层知识"></a>8. 底层知识</h3><p>这一篇中，<strong>卷积神经网络</strong>、<strong>Dropout</strong>、<strong>AdamOptimizer优化函数</strong>的具体原理还没有完全搞明白。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/28/TensorFLow学习笔记（二）/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</div>
+</section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -18,7 +18,7 @@ MNIST是一个简单的计算机视觉数据集。有好多手写数字图片，
 MNIST是一个简单的计算机视觉数据集。有好多手写数字图片，并有相应的label标记，说明这张图片是数字几（0~9）。
 一个简">
 <meta property="og:image" content="http://yoursite.com/..\TensorFLow学习笔记（二）\tensor.jpg">
-<meta property="og:updated_time" content="2017-03-01T05:43:09.710Z">
+<meta property="og:updated_time" content="2017-03-04T12:10:57.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="TensorFLow学习笔记（二）">
 <meta name="twitter:description" content="官方文档第二篇。MNIST for ML Beginners先介绍MNIST，还有softmax regression（softmax回归），然后利用tensorflow构建一个模型。
@@ -108,7 +108,7 @@ MathJax.Hub.Config({
 <p>一个简单的任务就是，训练一个模型，然后给它一张图片，它会预测出这张图片是数字几。（是一个分类Classification问题，多分类）</p>
 <a id="more"></a>
 <p>MNIST是放在<a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="external">Yann LeCun’s website</a> (CNN的提出者)，Google提供代码可以将数据下载下来，并已经把数据分为了<strong>training data</strong>训练数据、<strong>validation data</strong>验证数据、<strong>test data</strong>测试数据。训练数据是训练模型用，验证数据也是在训练模型的过程中用（比如防止模型对于训练数据的过拟合，模型对于训练数据的表现在越来越好，而对于验证数据的表现并没有越来越好），测试数据是为了验证模型的泛化能力，在训练过程中是不能被模型“看到的“。这些数据是很多的。</p>
-<p>具体到计算机上的数据表示。图片本身是28像素 X 28像素的，用一个28 X 28的数字矩阵表示。图片上越黑，对应数字矩阵的数字越大（图片都是灰度的）。然后将这个数字矩阵“压扁”成为一个28 * 28 = 784维的向量。用x表示一张图片，那么x = [0.1, 0.2, 0., 0.5……]，一共784个值。对于这张图片的标签，用y表示，它是一个“<strong>one-hot vector</strong>”，假设这张图片是数字3，那y就是[0, 0, 1, 0, 0, 0, 0, 0, 0]。</p>
+<p>具体到计算机上的数据表示。图片本身是28像素 X 28像素的，用一个28 X 28的数字矩阵表示。图片上越黑，对应数字矩阵的数字越大（图片都是灰度的）。然后将这个数字矩阵“压扁”成为一个28 * 28 = 784维的向量。用x表示一张图片，那么 <del>x = [0.1, 0.2, 0., 0.5……]</del> x中的值应该是0~255中的一个，数字越大，像素点越黑，一共784个值。对于这张图片的标签，用y表示，它是一个“<strong>one-hot vector</strong>”，假设这张图片是数字3，那y就是[0, 0, 1, 0, 0, 0, 0, 0, 0]。</p>
 <h3 id="2-Softmax-Regressions"><a href="#2-Softmax-Regressions" class="headerlink" title="2. Softmax Regressions"></a>2. Softmax Regressions</h3><p>Softmax回归。机器学习的问题分为两种，一种分类Classification问题，一种回归Regression问题。分类问题的输出是离散值，回归问题的输出是连续值。虽然Softmax Regressions有个回归，但它是解决分类问题的，而且是多分类问题。对应的，二分类问题有<strong>Logistic Regression</strong>方法。</p>
 <p>给定一个输入，比如一张动物图片，经过模型的推理，它告诉我们这张图片有20%的概率是猪，20%的概率是猫，60%的概率是马。Softmax回归就是干这件事儿的。它先算出根据图片中的哪些东西推断出这张图片是猪、是猫、是马（三个类别的<strong>evidence</strong>）。比如，图片中有个尖尖的耳朵，那 evidence(猫) 和 evidence(马)就比evidence(猪)要大，但图片中还有长腿，那evidence(马)就比evidence(猫)和evidence(猪)要大许多了。就这样找好多特征，算出每个特征对应的每个类别的evidence，最后总和起来就得到了这张图片可能是某个类别的evidence。（对于每个类别再加上一定的偏差。）之后softmax回归可以把这些evidence“映射”到每个类别的概率上。</p>
 <p>具体到这个例子。图片有10个类别。每个类别i的evidence为：$\text{evidence}_i = \sum_j W x_j + b_i$ </p>
@@ -139,6 +139,8 @@ MathJax.Hub.Config({
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/03/04/TensorFLow学习笔记（三）/" id="article-nav-newer" class="article-nav-link-wrap">WEI</a>
   
   
     <a href="/2017/02/27/JS高程（五）/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>
