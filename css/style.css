@@ -981,7 +981,6 @@ a.article-title:hover {
 }
 #page-nav a,
 #page-nav span {
-  display: block;
   width: 30px;
   height: 30px;
   background: #f4f4f4;
@@ -1020,6 +1019,7 @@ a.article-title:hover {
 }
 #page-nav .space {
   color: #ddd;
+  display: inline-block;
 }
 #footer {
   background: #262a30;
