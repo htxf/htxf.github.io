@@ -66,6 +66,55 @@ MathJax.Hub.Config({
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
   
+    <article id="post-Python爬虫-爬取孙艺珍Instagram上的照片和视频" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/">Python爬虫--爬取孙艺珍Instagram上的照片和视频</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-29T07:01:43.000Z" itemprop="datePublished">Mar 29 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h3><p>爬取到<a href="https://www.instagram.com/yejinhand/">孙艺珍Instagram</a>上的所有照片和视频。</p>
+<h3 id="2-解决过程"><a href="#2-解决过程" class="headerlink" title="2. 解决过程"></a>2. 解决过程</h3><h4 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h4><p>先打开网页，OBOB。</p>
+<p>该页面初始时只显示12张照片，通过点击”更多“按钮，屏幕一直往下滚动，会显示更多，直到显示出所有的照片和视频。在此过程中，该网页并没有重新加载。所以新显示出来的照片和视频是通过Ajax技术从服务器获取到的。</p>
+<p>之前理解的爬虫一直是找HTML文件中的某些内容，并且根据某些规则不停地更新需要请求的网页列表，这样就不断的有新的HTML文件。</p>
+<p>针对现在这种情况。会有两种解决方案？一种是在代码中模拟屏幕滚动，将所有内容都显示出来后，爬下整个HTML，从中找到照片和视频的url（或者边滚动边查找）；另一种是直接去找<strong>XHR</strong>（XmlHttpRequest对象），其中肯定存有照片和视频的url信息。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-爬虫/">python 爬虫</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-JS高程（七）" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -245,59 +294,6 @@ MathJax.Hub.Config({
     <footer class="article-footer">
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-JS高程（五）" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2017/02/27/JS高程（五）/">JS高程（五）</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2017-02-27T06:00:42.000Z" itemprop="datePublished">Feb 27 2017</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）"><a href="#第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）" class="headerlink" title="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）"></a>第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）</h2><h3 id="5-5-Function类型"><a href="#5-5-Function类型" class="headerlink" title="5.5 Function类型"></a>5.5 Function类型</h3><blockquote>
-<p>函数是对象。<br>函数名实际上是一个指向对象的指针。</p>
-</blockquote>
-<p><strong>函数的定义</strong></p>
-<ul>
-<li>法一：<strong>函数声明</strong></li>
-<li>法二：<strong>函数表达式</strong></li>
-<li>法三：使用Function构造函数</li>
-</ul>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/27/JS高程（五）/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
 
 
     </footer>
