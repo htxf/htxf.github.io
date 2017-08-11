@@ -66,6 +66,49 @@ MathJax.Hub.Config({
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
   
+    <article id="post-重装系统后配置hexo" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/08/11/重装系统后配置hexo/">重装系统后配置 Hexo</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-08-11T11:08:48.000Z" itemprop="datePublished">Aug 11 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。</p>
+<p>1、 安装 Node.js、安装 Git Bash。<br>2、 安装 Hexo。<br>3、 在 Git Bash 中配置 useremail 和 username。<br>4、 检查 HexoBlog 中的 _config 文件中 deloy 的配置是否正确。type: git; repository: git@github.com:htxf/htxf.github.io.git; branch: master<br>5、 根据 GitHub 的<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">教程</a>重新再生成 SSH keys （默认在 C:\Users\Administrator 文件夹下）、将其加入到 Git 中、将其加入到 GitHub 中。</p>
+<p>PS：如果之前将生成的 ssh 放到其他盘中，重装系统后应该就不用重新生成 ssh key 了吧，只需安装了将其加入Git中，此时GitHub中还保存着之前的sshkey了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-重装系统/">hexo 重装系统</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Python爬虫-爬取孙艺珍Instagram上的照片和视频" class="article article-type-post" itemscope itemprop="blogPost">
 
   <div class="article-inner">
@@ -239,54 +282,6 @@ MathJax.Hub.Config({
         
           <p class="article-more-link">
             <a href="/2017/03/04/TensorFLow学习笔记（三）/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-TensorFLow学习笔记（二）" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2017/02/28/TensorFLow学习笔记（二）/">TensorFLow学习笔记（二）</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2017-02-28T09:09:08.000Z" itemprop="datePublished">Feb 28 2017</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>官方文档第二篇。<a href="https://www.tensorflow.org/get_started/mnist/beginners">MNIST for ML Beginners</a><br>先介绍MNIST，还有softmax regression（softmax回归），然后利用tensorflow构建一个模型。</p>
-<h3 id="1-MNIST"><a href="#1-MNIST" class="headerlink" title="1. MNIST"></a>1. MNIST</h3><p>MNIST对于机器学习就相当于Hello World对于一门编程语言。</p>
-<p>MNIST是一个简单的计算机视觉数据集。有好多手写数字图片，并有相应的<strong>label标记</strong>，说明这张图片是数字几（0~9）。</p>
-<p>一个简单的任务就是，训练一个模型，然后给它一张图片，它会预测出这张图片是数字几。（是一个分类Classification问题，多分类）</p>
-        
-          <p class="article-more-link">
-            <a href="/2017/02/28/TensorFLow学习笔记（二）/#more">→_→阅读全文</a>
           </p>
         
       

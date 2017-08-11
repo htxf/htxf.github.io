@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-14T09:35:28.320Z</updated>
+  <updated>2017-08-11T11:29:55.104Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重装系统后配置 Hexo</title>
+    <link href="http://yoursite.com/2017/08/11/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E9%85%8D%E7%BD%AEhexo/"/>
+    <id>http://yoursite.com/2017/08/11/重装系统后配置hexo/</id>
+    <published>2017-08-11T11:08:48.000Z</published>
+    <updated>2017-08-11T11:29:55.104Z</updated>
+    
+    <content type="html"><![CDATA[<p>重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。</p>
+<p>1、 安装 Node.js、安装 Git Bash。<br>2、 安装 Hexo。<br>3、 在 Git Bash 中配置 useremail 和 username。<br>4、 检查 HexoBlog 中的 _config 文件中 deloy 的配置是否正确。type: git; repository: git@github.com:htxf/htxf.github.io.git; branch: master<br>5、 根据 GitHub 的<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">教程</a>重新再生成 SSH keys （默认在 C:\Users\Administrator 文件夹下）、将其加入到 Git 中、将其加入到 GitHub 中。</p>
+<p>PS：如果之前将生成的 ssh 放到其他盘中，重装系统后应该就不用重新生成 ssh key 了吧，只需安装了将其加入Git中，此时GitHub中还保存着之前的sshkey了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。&lt;/p&gt;
+&lt;p&gt;1、 安装 Node.js、安装 Git Bash。&lt;br&gt;2、 安装 Hexo。&lt;br&gt;3、 在 Git Bash 中配置 useremail 和 username。&lt;br&gt;4、 检查 H
+    
+    </summary>
+    
+    
+      <category term="hexo 重装系统" scheme="http://yoursite.com/tags/hexo-%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Python爬虫--爬取孙艺珍Instagram上的照片和视频</title>
@@ -1647,20 +1671,6 @@
     
     
       <category term="系统结构" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>換系統測試</title>
-    <link href="http://yoursite.com/2016/02/23/%E6%8F%9B%E7%B3%BB%E7%B5%B1%E6%B8%AC%E8%A9%A6/"/>
-    <id>http://yoursite.com/2016/02/23/換系統測試/</id>
-    <published>2016-02-23T05:54:29.000Z</published>
-    <updated>2016-10-29T09:58:33.495Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
