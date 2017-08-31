@@ -26,6 +26,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -55,13 +56,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center">
   

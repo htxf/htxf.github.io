@@ -1,3 +1,4 @@
+
 	$(function(){
 
 
@@ -14,18 +15,22 @@
 		$('.home').on('click', function(){
 			window.sessionStorage.notes_click = false;
 			window.sessionStorage.home_click = true;
+			window.sessionStorage.tucaos_click = false;
+			// window.sessionStorage.resume_click = false;
 			// $.cookie("notes_click", false);
 			// $.cookie("home_click", true);
 		});
 
 		$(document).on('click', function(){
 			// $('#bg').removeClass('blur');背景不用了
-			$('body').removeClass('bodyBlur');
-			$('.hamburger').removeClass('open');
-			$('p').removeClass('blur');
-			$('#insert').removeClass('blur');
-			$('.outer').removeClass('blur');
-			// $('.lightbox').removeClass("fadeIn");遮罩不用了
+			if (window.location.pathname != '/resume/') {
+				$('body').removeClass('bodyBlur');
+				$('.hamburger').removeClass('open');
+				$('p').removeClass('blur');
+				$('#insert').removeClass('blur');
+				$('.outer').removeClass('blur');
+				// $('.lightbox').removeClass("fadeIn");遮罩不用了
+			}
 		});
 
 		$('.home_notes_showon').on('click', function(){
@@ -37,19 +42,64 @@
 			$('.outer').removeClass('blur');
 			window.sessionStorage.notes_click = true;
 			window.sessionStorage.home_click = false;
+			window.sessionStorage.tucaos_click = false;
+			// window.sessionStorage.resume_click = false;
+			// $.cookie("notes_click", true);
+			// $.cookie("home_click", false);
+		});
+		// 新增的吐槽类别
+		$('.home_tucaos_showon').on('click', function(){
+
+			$('body').removeClass('bodyBlur');
+			$('.hamburger').removeClass('open');
+			$('p').removeClass('blur');
+			$('#insert').removeClass('blur');
+			$('.outer').removeClass('blur');
+			window.sessionStorage.notes_click = false;
+			window.sessionStorage.home_click = false;
+			window.sessionStorage.tucaos_click = true;
+			// window.sessionStorage.resume_click = false;
 			// $.cookie("notes_click", true);
 			// $.cookie("home_click", false);
 		});
 
+		// 新增简历页面，把body背景设为模糊
+		// $('.resume').on('click', function(){
+		// 	alert('aa')
+		// 	window.sessionStorage.resume_click = true;
+		// 	window.sessionStorage.notes_click = false;
+		// 	window.sessionStorage.home_click = false;
+		// });
 
+		// if (window.sessionStorage.resume_click == "true") {
+		// 	$('body').addClass('bodyNotes');
+		// }
+
+		// 另一种做法 这才是正确的做法
+		if (window.location.pathname == '/resume/') {
+			$('body').addClass('bodyNotes');
+		}
 
 
 		//判断点击home进入首页index还是点击Notes进入首页index,根据这个来该变主题内容和header上的landmark
 		if (window.sessionStorage.notes_click =="true") {
 			$('.home_p').addClass('off');
 			$('.home_notes_list').addClass('show');
-			$('#insert').html('<a href="/">Notes</a>');
+			$('#insert').html('<a href="/categories/note">Notes</a>');
 			$('#insert').addClass('landmark notes animated fadeInLeft');
+			window.sessionStorage.notes_in = true;
+			$('#insert').removeClass('home_logo');
+			$('body').addClass('bodyNotes');
+
+		}
+		
+		// 新增的tucao类别
+		if (window.sessionStorage.tucaos_click =="true") {
+			$('.home_p').addClass('off');
+			$('.home_notes_list').addClass('show');
+			$('#insert').html('<a href="/categories/tucao">Tucaos</a>');
+			$('#insert').addClass('landmark notes animated fadeInLeft');
+			window.sessionStorage.tucaos_in = true;
 			$('#insert').removeClass('home_logo');
 			$('body').addClass('bodyNotes');
 

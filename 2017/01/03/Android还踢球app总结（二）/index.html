@@ -18,7 +18,7 @@
 <meta property="og:image" content="http://yoursite.com/..\Android还踢球app总结（二）\lauch_a_game2.png">
 <meta property="og:image" content="http://yoursite.com/..\Android还踢球app总结（二）\determine_a_location.png">
 <meta property="og:image" content="http://yoursite.com/..\Android还踢球app总结（二）\game_detail.jpg">
-<meta property="og:updated_time" content="2017-01-17T10:33:24.415Z">
+<meta property="og:updated_time" content="2017-08-31T07:20:52.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android还踢球app总结（二）">
 <meta name="twitter:description" content="第二篇介绍下界面设计及其实现。当然是想遵循Material Design。但它不是单单的大色块，或者是某些控件的应用。还有层级、动画之类的设计。我做的呢其实是很简单，而且主要是copy了好多介绍这类设计的demo。比如Google出的一个Cheesesquare，这个主要是介绍Android Design library。然后几乎就按照这样的设计做的。。目前实现了找组织模块。">
@@ -38,6 +38,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -67,13 +68,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-Android还踢球app总结（二）" class="article article-type-post" itemscope itemprop="blogPost">
 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-11T11:29:55.104Z</updated>
+  <updated>2017-08-31T09:02:27.771Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>吐槽2</title>
+    <link href="http://yoursite.com/2017/08/31/%E5%90%90%E6%A7%BD2/"/>
+    <id>http://yoursite.com/2017/08/31/吐槽2/</id>
+    <published>2017-08-31T06:56:54.000Z</published>
+    <updated>2017-08-31T09:02:27.771Z</updated>
+    
+    <content type="html"><![CDATA[<p>不同的category。和resume的设置方法不一样。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不同的category。和resume的设置方法不一样。&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="tucao" scheme="http://yoursite.com/categories/tucao/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>重装系统后配置 Hexo</title>
     <link href="http://yoursite.com/2017/08/11/%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%90%8E%E9%85%8D%E7%BD%AEhexo/"/>
     <id>http://yoursite.com/2017/08/11/重装系统后配置hexo/</id>
     <published>2017-08-11T11:08:48.000Z</published>
-    <updated>2017-08-11T11:29:55.104Z</updated>
+    <updated>2017-08-31T07:05:40.073Z</updated>
     
     <content type="html"><![CDATA[<p>重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。</p>
 <p>1、 安装 Node.js、安装 Git Bash。<br>2、 安装 Hexo。<br>3、 在 Git Bash 中配置 useremail 和 username。<br>4、 检查 HexoBlog 中的 _config 文件中 deloy 的配置是否正确。type: git; repository: git@github.com:htxf/htxf.github.io.git; branch: master<br>5、 根据 GitHub 的<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">教程</a>重新再生成 SSH keys （默认在 C:\Users\Administrator 文件夹下）、将其加入到 Git 中、将其加入到 GitHub 中。</p>
@@ -34,6 +56,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="hexo 重装系统" scheme="http://yoursite.com/tags/hexo-%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
     
@@ -44,7 +68,7 @@
     <link href="http://yoursite.com/2017/03/29/Python%E7%88%AC%E8%99%AB-%E7%88%AC%E5%8F%96%E5%AD%99%E8%89%BA%E7%8F%8DInstagram%E4%B8%8A%E7%9A%84%E7%85%A7%E7%89%87%E5%92%8C%E8%A7%86%E9%A2%91/"/>
     <id>http://yoursite.com/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/</id>
     <published>2017-03-29T07:01:43.000Z</published>
-    <updated>2017-04-14T09:35:28.320Z</updated>
+    <updated>2017-08-31T07:11:05.486Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h3><p>爬取到<a href="https://www.instagram.com/yejinhand/" target="_blank" rel="external">孙艺珍Instagram</a>上的所有照片和视频。</p>
 <h3 id="2-解决过程"><a href="#2-解决过程" class="headerlink" title="2. 解决过程"></a>2. 解决过程</h3><h4 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h4><p>先打开网页，OBOB。</p>
@@ -131,6 +155,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="python 爬虫" scheme="http://yoursite.com/tags/python-%E7%88%AC%E8%99%AB/"/>
     
@@ -141,7 +167,7 @@
     <link href="http://yoursite.com/2017/03/13/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%B8%83%EF%BC%89/"/>
     <id>http://yoursite.com/2017/03/13/JS高程（七）/</id>
     <published>2017-03-13T11:25:47.000Z</published>
-    <updated>2017-03-16T08:39:47.062Z</updated>
+    <updated>2017-08-31T07:21:08.658Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第七章-函数表达式"><a href="#第七章-函数表达式" class="headerlink" title="第七章 函数表达式"></a>第七章 函数表达式</h2><p>函数表达式是干什么的？用来创建函数的。创建函数的方法有：<strong>函数声明</strong>、<strong>函数表达式</strong>。</p>
 <p>函数声明，有个特征：<strong>函数声明提升</strong>。函数表达式并没有。</p>
@@ -221,6 +247,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
@@ -231,7 +259,7 @@
     <link href="http://yoursite.com/2017/03/05/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E5%85%AD%EF%BC%89/"/>
     <id>http://yoursite.com/2017/03/05/JS高程（六）/</id>
     <published>2017-03-05T09:15:14.000Z</published>
-    <updated>2017-03-08T12:18:16.204Z</updated>
+    <updated>2017-08-31T07:21:01.810Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第6章-面向对象的程序设计"><a href="#第6章-面向对象的程序设计" class="headerlink" title="第6章 面向对象的程序设计"></a>第6章 面向对象的程序设计</h2><p>JS与传统的面向对象（Object-Oriented）的语言不同，它没有类的概念。</p>
 <p>可以把JS的对象看作是散列表：无非就是一组名值对，其中值可以是<strong>数据</strong>或<strong>函数</strong>。</p>
@@ -346,6 +374,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
@@ -356,7 +386,7 @@
     <link href="http://yoursite.com/2017/03/04/TensorFLow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://yoursite.com/2017/03/04/TensorFLow学习笔记（三）/</id>
     <published>2017-03-04T12:35:50.000Z</published>
-    <updated>2017-08-11T09:35:05.830Z</updated>
+    <updated>2017-08-31T07:08:46.135Z</updated>
     
     <content type="html"><![CDATA[<p>官方文档第三篇。<a href="https://www.tensorflow.org/get_started/mnist/pros" target="_blank" rel="external">Deep MNIST for Experts</a></p>
 <p>这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。</p>
@@ -397,6 +427,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="tensorflow学习" scheme="http://yoursite.com/tags/tensorflow%E5%AD%A6%E4%B9%A0/"/>
     
@@ -407,7 +439,7 @@
     <link href="http://yoursite.com/2017/02/28/TensorFLow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/28/TensorFLow学习笔记（二）/</id>
     <published>2017-02-28T09:09:08.000Z</published>
-    <updated>2017-03-04T12:10:57.314Z</updated>
+    <updated>2017-08-31T07:08:38.487Z</updated>
     
     <content type="html"><![CDATA[<p>官方文档第二篇。<a href="https://www.tensorflow.org/get_started/mnist/beginners" target="_blank" rel="external">MNIST for ML Beginners</a><br>先介绍MNIST，还有softmax regression（softmax回归），然后利用tensorflow构建一个模型。</p>
 <h3 id="1-MNIST"><a href="#1-MNIST" class="headerlink" title="1. MNIST"></a>1. MNIST</h3><p>MNIST对于机器学习就相当于Hello World对于一门编程语言。</p>
@@ -444,6 +476,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="tensorflow学习" scheme="http://yoursite.com/tags/tensorflow%E5%AD%A6%E4%B9%A0/"/>
     
@@ -454,7 +488,7 @@
     <link href="http://yoursite.com/2017/02/27/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%BA%94%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/27/JS高程（五）/</id>
     <published>2017-02-27T06:00:42.000Z</published>
-    <updated>2017-03-08T12:18:06.605Z</updated>
+    <updated>2017-08-31T07:11:53.286Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）"><a href="#第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）" class="headerlink" title="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）"></a>第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）</h2><h3 id="5-5-Function类型"><a href="#5-5-Function类型" class="headerlink" title="5.5 Function类型"></a>5.5 Function类型</h3><blockquote>
 <p>函数是对象。<br>函数名实际上是一个指向对象的指针。</p>
@@ -637,6 +671,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
@@ -647,7 +683,7 @@
     <link href="http://yoursite.com/2017/02/23/TensorFlow%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/23/TensorFlow学习笔记（一）/</id>
     <published>2017-02-23T11:30:06.000Z</published>
-    <updated>2017-02-27T06:02:58.063Z</updated>
+    <updated>2017-08-31T07:09:03.207Z</updated>
     
     <content type="html"><![CDATA[<p>按照<a href="https://www.tensorflow.org/" target="_blank" rel="external">官网</a>的介绍、教程学习。整理、记录知识点。</p>
 <p>这一篇是最开始的一篇。<a href="https://www.tensorflow.org/get_started/get_started" target="_blank" rel="external">Getting Started With TensorFlow</a></p>
@@ -715,6 +751,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="tensorflow学习" scheme="http://yoursite.com/tags/tensorflow%E5%AD%A6%E4%B9%A0/"/>
     
@@ -725,7 +763,7 @@
     <link href="http://yoursite.com/2017/02/22/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/22/JS高程（四）/</id>
     <published>2017-02-22T09:17:49.000Z</published>
-    <updated>2017-02-27T07:40:33.561Z</updated>
+    <updated>2017-08-31T07:08:04.991Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第5章-引用类型（一）（Object、Array、Date）"><a href="#第5章-引用类型（一）（Object、Array、Date）" class="headerlink" title="第5章 引用类型（一）（Object、Array、Date）"></a>第5章 引用类型（一）（Object、Array、Date）</h2><p><strong>引用类型</strong>是一种数据结构，和其他面向对象语言中的<strong>类</strong>很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型<strong>Object</strong>，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，也有许多内置的<strong>原生引用类型</strong>：Array、Date、RegExp、Function、基本包装类型、单体内置对象。</p>
 <a id="more"></a>
@@ -894,6 +932,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
     
@@ -904,7 +944,7 @@
     <link href="http://yoursite.com/2017/01/18/Android%E8%BF%98%E8%B8%A2%E7%90%83app%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://yoursite.com/2017/01/18/Android还踢球app总结（三）/</id>
     <published>2017-01-18T07:17:13.000Z</published>
-    <updated>2017-02-20T05:37:44.462Z</updated>
+    <updated>2017-08-31T07:20:50.762Z</updated>
     
     <content type="html"><![CDATA[<p>这一篇介绍一下用到的开发模式。做这款软件时对于Android开发的了解仅仅只是看了郭霖大神的《第一行代码》，对于开发模式，或者说软件架构什么的都不了解。不过之前帮一个老师做类似校园BBS时，听他介绍过MVC，自己也查过一些关于MVC的资料。其目的是为了让各个模块儿互相更独立，高内聚低耦合。而<strong>M(Model)模型</strong>、<strong>V(View)视图</strong>、<strong>C(Controller)控制器</strong>，应该是<strong>数据访问</strong>、<strong>界面展示</strong>、<strong>业务逻辑</strong>三者的对应，正是一个软件不可少的东西。</p>
 <h3 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h3><p>在敲代码之前，是先做了一些功能模块的划分，再做了UI，然后就在想用什么方式组织代码，可以提高效率。同时也在想如果是在公司做的话，会用什么方式分配这些不同模块、不同功能的代码任务。之后就在网上查到了应用于Android的MVP模式。它其实是从MVC模式演化而来。</p>
@@ -955,6 +995,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
@@ -965,7 +1007,7 @@
     <link href="http://yoursite.com/2017/01/03/Android%E8%BF%98%E8%B8%A2%E7%90%83app%E6%80%BB%E7%BB%93%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2017/01/03/Android还踢球app总结（二）/</id>
     <published>2017-01-03T07:43:14.000Z</published>
-    <updated>2017-01-17T10:33:24.415Z</updated>
+    <updated>2017-08-31T07:20:52.258Z</updated>
     
     <content type="html"><![CDATA[<p>第二篇介绍下界面设计及其实现。当然是想遵循Material Design。但它不是单单的大色块，或者是某些控件的应用。还有层级、动画之类的设计。我做的呢其实是很简单，而且主要是copy了好多介绍这类设计的demo。比如Google出的一个<a href="https://github.com/chrisbanes/cheesesquare" target="_blank" rel="external">Cheesesquare</a>，这个主要是介绍<strong>Android Design library</strong>。然后几乎就按照这样的设计做的。。目前实现了<strong>找组织</strong>模块。<br><a id="more"></a></p>
 <h2 id="1-浏览帖子"><a href="#1-浏览帖子" class="headerlink" title="1. 浏览帖子"></a>1. 浏览帖子</h2><p>难点或者说比较新的东西就在这块。<br>实现效果如下图所示。</p>
@@ -1009,6 +1051,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
@@ -1019,7 +1063,7 @@
     <link href="http://yoursite.com/2016/11/14/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://yoursite.com/2016/11/14/JS高程（三）/</id>
     <published>2016-11-14T03:08:26.000Z</published>
-    <updated>2016-12-22T09:23:24.659Z</updated>
+    <updated>2017-08-31T07:21:05.130Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第4章-变量、作用域和内存问题"><a href="#第4章-变量、作用域和内存问题" class="headerlink" title="第4章 变量、作用域和内存问题"></a>第4章 变量、作用域和内存问题</h2><h3 id="1-基本类型值和引用类型值"><a href="#1-基本类型值和引用类型值" class="headerlink" title="1. 基本类型值和引用类型值"></a>1. 基本类型值和引用类型值</h3><p>注意区别：ECMAScript有6种<strong>数据类型</strong>（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同<strong>数据类型的值</strong>，即<br><strong>基本类型值</strong> 是指简单的数据段<br><strong>引用类型值</strong>是指那些可能由多个值构成的对象</p>
 <p>5种基本数据类型：Undefined、Null、Boolean、Number、String是<strong>基本类型值</strong>，是<strong>按值访问</strong>的，因为可以操作保存在变量中的实际的值。<br>1种复杂数据类型：Object是<strong>引用类型值</strong>，是<strong>按引用访问</strong>的，因为操作对象时，实际上是在操作对象的引用而不是实际的对象。<br><a id="more"></a></p>
@@ -1072,6 +1116,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
     
@@ -1082,7 +1128,7 @@
     <link href="http://yoursite.com/2016/11/03/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2016/11/03/JS高程（二）/</id>
     <published>2016-11-03T03:50:23.000Z</published>
-    <updated>2016-11-14T10:01:00.347Z</updated>
+    <updated>2017-08-31T07:20:58.386Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第3章-基本概念"><a href="#第3章-基本概念" class="headerlink" title="第3章 基本概念"></a>第3章 基本概念</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h3><ul>
 <li><p>区分大小写</p>
@@ -1370,6 +1416,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
     
@@ -1380,7 +1428,7 @@
     <link href="http://yoursite.com/2016/10/30/Android%E8%BF%98%E8%B8%A2%E7%90%83app%E6%80%BB%E7%BB%93%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2016/10/30/Android还踢球app总结（一）/</id>
     <published>2016-10-30T08:27:03.000Z</published>
-    <updated>2016-10-30T08:27:35.222Z</updated>
+    <updated>2017-08-31T07:20:55.266Z</updated>
     
     <content type="html"><![CDATA[<p>这个小项目做完快半年多了，一直想总结一下，记录一些想法和技能。大概分五篇完成，第一篇介绍目标人群、需求分析还有功能介绍；第二篇介绍界面设计及简单的代码实现；第三篇介绍”开发模式“；第四篇介绍用到的第三方服务；第五篇介绍一些小的功能点和知识点。</p>
 <h2 id="1-目标人群"><a href="#1-目标人群" class="headerlink" title="1.目标人群"></a>1.目标人群</h2><p>当然是广大的足球爱好者，是真正想下场踢球的足球爱好者。</p>
@@ -1434,6 +1482,8 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
@@ -1444,7 +1494,7 @@
     <link href="http://yoursite.com/2016/10/29/%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91%E4%B8%8Atest2/"/>
     <id>http://yoursite.com/2016/10/29/不同电脑上test2/</id>
     <published>2016-10-29T11:27:52.000Z</published>
-    <updated>2016-10-29T11:31:32.332Z</updated>
+    <updated>2017-08-31T07:47:13.845Z</updated>
     
     <content type="html"><![CDATA[<p>不同电脑上test2 来自笔记本</p>
 ]]></content>
@@ -1456,6 +1506,10 @@
     
     </summary>
     
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
     
   </entry>
   
@@ -1464,7 +1518,7 @@
     <link href="http://yoursite.com/2016/10/29/%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91%E5%90%8C%E6%AD%A5test/"/>
     <id>http://yoursite.com/2016/10/29/不同电脑同步test/</id>
     <published>2016-10-29T10:07:23.000Z</published>
-    <updated>2016-10-29T10:08:18.821Z</updated>
+    <updated>2017-08-31T07:47:08.710Z</updated>
     
     <content type="html"><![CDATA[<p>不同电脑同步test. 来自实验室</p>
 ]]></content>
@@ -1476,6 +1530,10 @@
     
     </summary>
     
+      <category term="test" scheme="http://yoursite.com/categories/test/"/>
+    
+    
+      <category term="test" scheme="http://yoursite.com/tags/test/"/>
     
   </entry>
   
@@ -1484,7 +1542,7 @@
     <link href="http://yoursite.com/2016/10/26/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2016/10/26/JS高程（一）/</id>
     <published>2016-10-26T13:24:23.000Z</published>
-    <updated>2016-12-22T09:21:35.156Z</updated>
+    <updated>2017-08-31T07:11:30.846Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第1章-简介"><a href="#第1章-简介" class="headerlink" title="第1章 简介"></a>第1章 简介</h2><h3 id="1-几个人东"><a href="#1-几个人东" class="headerlink" title="1. 几个人东"></a>1. 几个人东</h3><ul>
 <li>布兰登 艾奇 (Brendan Eich)</li>
@@ -1552,8 +1610,32 @@
     
     </summary>
     
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
+    
     
       <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吐槽1</title>
+    <link href="http://yoursite.com/2016/08/31/%E5%90%90%E6%A7%BD1/"/>
+    <id>http://yoursite.com/2016/08/31/吐槽1/</id>
+    <published>2016-08-31T07:00:42.000Z</published>
+    <updated>2017-08-31T09:02:22.157Z</updated>
+    
+    <content type="html"><![CDATA[<p>吐槽2</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;吐槽2&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="tucao" scheme="http://yoursite.com/categories/tucao/"/>
+    
     
   </entry>
   
@@ -1562,7 +1644,7 @@
     <link href="http://yoursite.com/2016/03/13/%E5%85%B3%E4%BA%8Ehexo%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2016/03/13/关于hexo的一些问题/</id>
     <published>2016-03-13T13:24:23.000Z</published>
-    <updated>2016-10-29T09:58:33.486Z</updated>
+    <updated>2017-08-31T07:06:44.729Z</updated>
     
     <content type="html"><![CDATA[<h2 id="1-hexo的deploy问题"><a href="#1-hexo的deploy问题" class="headerlink" title="1.hexo的deploy问题"></a>1.hexo的deploy问题</h2><p>之前在修改完主题之后，deploy就有过问题。</p>
 <p><strong>解决：</strong></p>
@@ -1606,75 +1688,10 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>计算机系统结构</title>
-    <link href="http://yoursite.com/2016/03/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/"/>
-    <id>http://yoursite.com/2016/03/12/计算机系统结构/</id>
-    <published>2016-03-12T04:30:08.000Z</published>
-    <updated>2016-10-29T09:58:33.501Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote>
-<p>计算机系统结构研究的是<strong>软、硬件之间的功能分配</strong>以及<strong>对传统机器级界面</strong>的确定，为机器语言、汇编语言程序设计者或编译程序设计者生成提供使其设计或生成的程序能在机器上正确运行而应看到和遵循的<strong>计算机属性</strong>。</p>
-</blockquote>
-<p>记录一些自己想过的知识点<br><a id="more"></a></p>
-<h1 id="计算机属性"><a href="#计算机属性" class="headerlink" title="计算机属性"></a>计算机属性</h1><h3 id="1-数据类型和格式"><a href="#1-数据类型和格式" class="headerlink" title="1.数据类型和格式"></a>1.数据类型和格式</h3><p>格式 例如：<a href="https://zh.wikipedia.org/wiki/IEEE_754" target="_blank" rel="external">754标准浮点数</a></p>
-<h3 id="2-最小可寻址单位"><a href="#2-最小可寻址单位" class="headerlink" title="2.最小可寻址单位"></a>2.最小可寻址单位</h3><p>若是<strong>字节Byte</strong> 假如有两个字节，需要1根地址线，0和1即可找到；<br>若是<strong>位bit</strong> 假如还是两个字节，但是每个字节有8位，一共是16位，则需要$ log_2^{16}=4 $根地址线。</p>
-<blockquote>
-<p>问题: （假设最小寻址单位是字节）现有<strong>16根地址线</strong>，那么寻址空间就是$ 2^{16}B=64KB $，从0000 <em>H</em>~FFFF <em>H</em>（<em>是<strong>四位</strong>的16进制</em>）。现还有一块<strong>1MB的内存</strong>,怎样设计才能使内存不浪费？即用16根地址线能找到1MB的地址空间从00000 <em>H</em>~FFFFF <em>H</em>（<em>是<strong>五位</strong>的16进制</em>）。</p>
-</blockquote>
-<p>$$ 1MB=1024KB=2^{10}KB=2^{10}\times1024B=2^{10}\times2^{10}B=2^{20}B $$</p>
-<p>本来是需要20根地址线的。</p>
-<p>解决：采用段号+段内偏移地址的方法。<br>$ 2^{20}/2^{16}=2^4 $,将1MB的内存分成$ 2^4=16 $块（16个64KB就是1MB），即是0块，1块，2块……F块（刚好是16进制）。<strong>每一块内</strong>，是64KB，用16位地址表示，所以每块的段内地址是从0000 <em>H</em>~FFFF <em>H</em>（<em> <strong>四位</strong>十六进制 </em>）。<strong>再加上</strong>前面的0段、1段、2段……F段，即第一段的地址是0 0000 <em>H</em>~0 FFFF <em>H</em>，第二段是1 0000 <em>H</em>~1FFFF <em>H</em>，第三段是2 0000 <em>H</em>~2 FFFF <em>H</em>，最后一段是F 0000 <em>H</em>~ F FFFF <em>H</em>，（<em> <strong>五位</strong>的16进制</em>）但这样，<strong>每块的首地址</strong>都是以0结尾，所以恰巧<strong>段号</strong>就可以<strong>把最后一位省略</strong>。实际寻址时，采用段号+段内偏移地址的方法来寻址。</p>
-<p>$ 实际地址=DS\times16+段内地址 $</p>
-<p>DS中存的是<strong>段号</strong>，比如第一段是0000 <em>H</em>，第二段是1000 <em>H</em>，第三段是2000<em>H</em>，最后一段是F000 <em>H</em>；乘以16表示16进制的数<strong>左移一位再补零</strong>。</p>
-<p>比如：有一个地址，段号是3，段内地址是152E <em>H</em>，它的实际内存址就是$ 3000H\times16=30000H $,再加上152E <em>H</em>，为3152E <em>H</em>。（<em>一个<strong>五位</strong>的十六进制</em>）</p>
-<h3 id="3-寻址种类"><a href="#3-寻址种类" class="headerlink" title="3.寻址种类"></a>3.寻址种类</h3><ul>
-<li>ADD AX, 3  寄存器寻址+立即寻址</li>
-<li>ADD AX, [BX]  BX中存放数据的地址</li>
-<li>ADD AX, BX+x  基址、变址寻址</li>
-<li>等等</li>
-</ul>
-<h3 id="4-内存的容量和最大可编址空间不同"><a href="#4-内存的容量和最大可编址空间不同" class="headerlink" title="4.内存的容量和最大可编址空间不同"></a>4.内存的容量和最大可编址空间不同</h3><p>例如： 现有32位的CPU（32根地址线更为准确？），最大可编址空间就是$ 2^{32}=2^2\times2^{10}\times2^{10}\times2^{10}=4GB $ （最小可寻址单位为字节B。B、K、M、G)。<br>但现在我只有一块2GB的内存。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;计算机系统结构研究的是&lt;strong&gt;软、硬件之间的功能分配&lt;/strong&gt;以及&lt;strong&gt;对传统机器级界面&lt;/strong&gt;的确定，为机器语言、汇编语言程序设计者或编译程序设计者生成提供使其设计或生成的程序能在机器上正确运行而应看到和遵循的&lt;strong&gt;计算机属性&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;记录一些自己想过的知识点&lt;br&gt;
-    
-    </summary>
+      <category term="note" scheme="http://yoursite.com/categories/note/"/>
     
     
-      <category term="系统结构" scheme="http://yoursite.com/tags/%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>怎么了</title>
-    <link href="http://yoursite.com/2016/01/08/%E6%80%8E%E4%B9%88%E4%BA%86/"/>
-    <id>http://yoursite.com/2016/01/08/怎么了/</id>
-    <published>2016-01-08T11:21:53.000Z</published>
-    <updated>2016-10-29T09:58:33.491Z</updated>
-    
-    <content type="html"><![CDATA[<p>真的是搞不懂 实在是搞不懂 完全搞不懂<br><a id="more"></a><br>哈哈哈</p>
-<p>#哈哈哈</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;真的是搞不懂 实在是搞不懂 完全搞不懂&lt;br&gt;
-    
-    </summary>
-    
-      <category term="吐槽" scheme="http://yoursite.com/categories/%E5%90%90%E6%A7%BD/"/>
-    
-    
-      <category term="问题" scheme="http://yoursite.com/tags/%E9%97%AE%E9%A2%98/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   

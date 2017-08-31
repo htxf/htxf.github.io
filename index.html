@@ -26,6 +26,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -55,16 +56,73 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><p class="home_p"><i>Never Settle</i></p>
 <div class="home_notes_list main_center">
+  
+    <article id="post-吐槽2" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/08/31/吐槽2/">吐槽2</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-08-31T06:56:54.000Z" itemprop="datePublished">Aug 31 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不同的category。和resume的设置方法不一样。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
   
     <article id="post-重装系统后配置hexo" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -242,53 +300,6 @@ MathJax.Hub.Config({
     <footer class="article-footer">
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
-
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-TensorFLow学习笔记（三）" class="article article-type-post" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name" >
-      <a class="article-title" href="/2017/03/04/TensorFLow学习笔记（三）/">TensorFLow学习笔记（三）</a>
-    </h1>
-  
-
-
-        <div class="article-meta">
-          <span class="article-date">
-  <time datetime="2017-03-04T12:35:50.000Z" itemprop="datePublished">Mar 4 2017</time>
-</span>
-
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>官方文档第三篇。<a href="https://www.tensorflow.org/get_started/mnist/pros">Deep MNIST for Experts</a></p>
-<p>这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。</p>
-<p>整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + Dropout层 + softmax回归。</p>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/04/TensorFLow学习笔记（三）/#more">→_→阅读全文</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
 
 
     </footer>

@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Htxf-fxtH">
 <meta property="og:description" content="第4章 变量、作用域和内存问题1. 基本类型值和引用类型值注意区别：ECMAScript有6种数据类型（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同数据类型的值，即基本类型值 是指简单的数据段引用类型值是指那些可能由多个值构成的对象
 5种基本数据类型：Undefined、Null、Boolean、Number、String是基本类型值，是按值访问的，因为可以操作保">
-<meta property="og:updated_time" content="2016-12-22T09:23:24.659Z">
+<meta property="og:updated_time" content="2017-08-31T07:21:05.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程（三）">
 <meta name="twitter:description" content="第4章 变量、作用域和内存问题1. 基本类型值和引用类型值注意区别：ECMAScript有6种数据类型（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同数据类型的值，即基本类型值 是指简单的数据段引用类型值是指那些可能由多个值构成的对象
@@ -33,6 +33,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -62,13 +63,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-JS高程（三）" class="article article-type-post" itemscope itemprop="blogPost">
 

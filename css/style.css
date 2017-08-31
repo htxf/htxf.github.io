@@ -1231,6 +1231,113 @@ pre .javascript .function {
     color: #fff;
   }
 }
+.resume i {
+  font-size: 38px !important;
+}
+.resume {
+  width: 1250px;
+  height: 1756px;
+  margin: 20px auto;
+  background: #fff;
+  font-family: "Microsoft YaHei Light";
+}
+.resume-left {
+  width: 382px;
+/*height: 1756px;*/
+  height: 100%;
+  background: #f3ffff;
+  -webkit-box-shadow: 2px 0px 1px #dfdfdf;
+  box-shadow: 2px 0px 1px #dfdfdf;
+  font-size: 30px;
+  padding-top: 66px;
+  float: left;
+}
+.avator {
+  width: 208px;
+  height: 208px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  margin: 0 auto;
+}
+.avator img {
+  width: 206px;
+  height: 206px;
+  border-radius: 50%;
+}
+.base_info {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 56px;
+}
+.base_info span {
+  display: block;
+  margin-top: 24px;
+}
+.left-center {
+  margin-top: 60px;
+}
+.resume-title {
+  width: 100%;
+  height: 75px;
+  font-size: 36px;
+  line-height: 75px;
+  padding-left: 40px;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+}
+.resume-title i {
+  margin-right: 10px;
+}
+.school {
+  margin-top: 26px;
+}
+.school div {
+  border-left: 6px solid #464646;
+  padding-left: 16px;
+  margin-left: 36px;
+}
+.school span {
+  display: block;
+  margin-left: 60px;
+  margin-top: 20px;
+}
+.left-bottom {
+  margin-top: 60px;
+}
+.left-bottom span {
+  display: block;
+  margin-top: 30px;
+}
+.left-bottom span i {
+  margin-left: 35px;
+  margin-right: 10px;
+}
+.left-bottom a {
+  text-decoration: none;
+  color: #000;
+}
+.resume-right {
+  padding-top: 66px;
+}
+.project {
+  margin-top: 38px;
+  padding-right: 15px;
+}
+.project-title {
+  margin-left: 422px;
+  font-size: 30px;
+}
+.project p {
+  margin-top: 14px;
+  font-size: 18px;
+  margin-left: 422px;
+}
+.zhanwei {
+  width: 30px;
+  height: 18px;
+/*background: #000;*/
+  display: inline-block;
+}
 @media screen and (min-width: 768px) {
   #sidebar {
     display: inline;

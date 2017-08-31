@@ -15,7 +15,7 @@
 <meta property="og:description" content="1.hexo的deploy问题之前在修改完主题之后，deploy就有过问题。
 解决：
 查资料后说是ssh key的问题。然后按照github上的关于ssh keys的help重新产生了一个ssh key，问题解决。但这次写完上篇笔记再deploy时，又出现了问题。但是我去C:\Users\Administrator.ssh目录查看,ssh key的几个文件都在，值和github自己账户上的ssh">
-<meta property="og:updated_time" content="2016-10-29T09:58:33.486Z">
+<meta property="og:updated_time" content="2017-08-31T07:06:44.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于hexo的一些问题">
 <meta name="twitter:description" content="1.hexo的deploy问题之前在修改完主题之后，deploy就有过问题。
@@ -36,6 +36,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -65,13 +66,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-关于hexo的一些问题" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -134,6 +153,8 @@ MathJax.Hub.Config({
     </div>
     <footer class="article-footer">
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
 
     </footer>
   </div>
@@ -141,7 +162,7 @@ MathJax.Hub.Config({
     
 <nav id="article-nav">
   
-    <a href="/2016/10/26/JS高程（一）/" id="article-nav-newer" class="article-nav-link-wrap">WEI</a>
+    <a href="/2016/08/31/吐槽1/" id="article-nav-newer" class="article-nav-link-wrap">WEI</a>
   
   
     <a href="/2016/03/12/计算机系统结构/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>

@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/22/JS高程（四）/index.html">
 <meta property="og:site_name" content="Htxf-fxtH">
 <meta property="og:description" content="第5章 引用类型（一）（Object、Array、Date）引用类型是一种数据结构，和其他面向对象语言中的类很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型Object，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，">
-<meta property="og:updated_time" content="2017-02-27T07:40:33.561Z">
+<meta property="og:updated_time" content="2017-08-31T07:08:04.991Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程（四）">
 <meta name="twitter:description" content="第5章 引用类型（一）（Object、Array、Date）引用类型是一种数据结构，和其他面向对象语言中的类很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型Object，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，">
@@ -30,6 +30,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -59,13 +60,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-JS高程（四）" class="article article-type-post" itemscope itemprop="blogPost">
 

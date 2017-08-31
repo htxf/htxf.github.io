@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="Htxf-fxtH">
 <meta property="og:description" content="重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。
 1、 安装 Node.js、安装 Git Bash。2、 安装 Hexo。3、 在 Git Bash 中配置 useremail 和 username。4、 检查 HexoBlog 中的 _config 文件中 deloy 的配置是否正确。type: git; repository: git@github.com:htxf/ht">
-<meta property="og:updated_time" content="2017-08-11T11:29:55.104Z">
+<meta property="og:updated_time" content="2017-08-31T07:05:40.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重装系统后配置 Hexo">
 <meta name="twitter:description" content="重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。
@@ -33,6 +33,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -62,13 +63,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-重装系统后配置hexo" class="article article-type-post" itemscope itemprop="blogPost">
 
@@ -110,6 +129,8 @@ MathJax.Hub.Config({
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/08/31/吐槽2/" id="article-nav-newer" class="article-nav-link-wrap">WEI</a>
   
   
     <a href="/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/" id="article-nav-older" class="article-nav-link-wrap">ALI</a>

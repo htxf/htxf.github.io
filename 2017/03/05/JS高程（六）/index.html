@@ -15,7 +15,7 @@
 <meta property="og:description" content="第6章 面向对象的程序设计JS与传统的面向对象（Object-Oriented）的语言不同，它没有类的概念。
 可以把JS的对象看作是散列表：无非就是一组名值对，其中值可以是数据或函数。
 每个对象都是基于一个引用类型创建的，这个引用类型可以是原生引用类型（Object、Array、Date、RegExp、Function、基本包装类型（Boolean、Number、String）、Math），也可以">
-<meta property="og:updated_time" content="2017-03-08T12:18:16.204Z">
+<meta property="og:updated_time" content="2017-08-31T07:21:01.810Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS高程（六）">
 <meta name="twitter:description" content="第6章 面向对象的程序设计JS与传统的面向对象（Object-Oriented）的语言不同，它没有类的概念。
@@ -36,6 +36,7 @@
   
 
   <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/iconfont.css">
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -65,13 +66,31 @@ MathJax.Hub.Config({
       <i ></i>
       <ul>
         <li class="home"><a href="/">Home<span></span></a></li>
-        <li><a href="http://cpbxx.lofter.com/" target="blank">Works<span></span></a></li>
-        <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li>
-        <li><a href="./tucaos.html">Tucaos<span></span></a></li>
+        <li><a href="http://cpbxx.lofter.com/" target="_blank">Works<span></span></a></li>
+        <!-- 这是最开始的时候 -->
+        <!-- <li class="home_notes_showon" ><a href="/">Notes<span></span></a></li> -->
+        <!-- 换成了带有类别的note或者tucao -->
+        <li class="home_notes_showon" ><a href="/categories/note">Notes<span></span></a></li>
+        <li class="home_tucaos_showon" ><a href="/categories/tucao">Tucaos<span></span></a></li>
+        <li><a href="/resume">Resume<span></span></a></li>
       </ul>
     </div>
 </header>
 
+
+<!-- 
+
+    <a class="main-nav-link" href="/">Home</a>
+
+    <a class="main-nav-link" href="/archives">Archives</a>
+
+    <a class="main-nav-link" href="/categories/note">Notes</a>
+
+    <a class="main-nav-link" href="/resume">Resume</a>
+
+    <a class="main-nav-link" href="/categories/tucao">Tucaos</a>
+ 
+-->
       <div class="outer">
         <section id="main"><div class="main_center"><article id="post-JS高程（六）" class="article article-type-post" itemscope itemprop="blogPost">
 
