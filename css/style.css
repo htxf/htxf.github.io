@@ -1236,13 +1236,15 @@ pre .javascript .function {
 }
 .resume {
   width: 1250px;
+/*width: 70%;*/
   height: 1756px;
-  margin: 20px auto;
+  margin: 30px auto;
   background: #fff;
   font-family: "Microsoft YaHei Light";
 }
 .resume-left {
   width: 382px;
+/*width: 30%;*/
 /*height: 1756px;*/
   height: 100%;
   background: #f3ffff;
