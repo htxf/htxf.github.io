@@ -212,7 +212,267 @@ MathJax.Hub.Config({
     </div></section>
   
 
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/4/">&raquo;</a>
+  </nav>
 </div>
+<!-- <div class="main_center">
+  
+    <article id="post-Android还踢球app总结（三）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/01/18/Android还踢球app总结（三）/">Android还踢球app总结（三）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-01-18T07:17:13.000Z" itemprop="datePublished">Jan 18 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这一篇介绍一下用到的开发模式。做这款软件时对于Android开发的了解仅仅只是看了郭霖大神的《第一行代码》，对于开发模式，或者说软件架构什么的都不了解。不过之前帮一个老师做类似校园BBS时，听他介绍过MVC，自己也查过一些关于MVC的资料。其目的是为了让各个模块儿互相更独立，高内聚低耦合。而<strong>M(Model)模型</strong>、<strong>V(View)视图</strong>、<strong>C(Controller)控制器</strong>，应该是<strong>数据访问</strong>、<strong>界面展示</strong>、<strong>业务逻辑</strong>三者的对应，正是一个软件不可少的东西。</p>
+<h3 id="1-预备知识"><a href="#1-预备知识" class="headerlink" title="1. 预备知识"></a>1. 预备知识</h3><p>在敲代码之前，是先做了一些功能模块的划分，再做了UI，然后就在想用什么方式组织代码，可以提高效率。同时也在想如果是在公司做的话，会用什么方式分配这些不同模块、不同功能的代码任务。之后就在网上查到了应用于Android的MVP模式。它其实是从MVC模式演化而来。</p>
+<blockquote>
+<p>在Android中Activity或者Fragment是用来做界面展示的，但是其生命周期对于整个软件是很关键的，所以会将一些业务逻辑写在Activity中，这样做很直观，但是其代价就是Activity会越来越臃肿……</p>
+</blockquote>
+        
+          <p class="article-more-link">
+            <a href="/2017/01/18/Android还踢球app总结（三）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Android还踢球app总结（二）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/01/03/Android还踢球app总结（二）/">Android还踢球app总结（二）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-01-03T07:43:14.000Z" itemprop="datePublished">Jan 3 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>第二篇介绍下界面设计及其实现。当然是想遵循Material Design。但它不是单单的大色块，或者是某些控件的应用。还有层级、动画之类的设计。我做的呢其实是很简单，而且主要是copy了好多介绍这类设计的demo。比如Google出的一个<a href="https://github.com/chrisbanes/cheesesquare">Cheesesquare</a>，这个主要是介绍<strong>Android Design library</strong>。然后几乎就按照这样的设计做的。。目前实现了<strong>找组织</strong>模块。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/01/03/Android还踢球app总结（二）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（三）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/11/14/JS高程（三）/">JS高程（三）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-11-14T03:08:26.000Z" itemprop="datePublished">Nov 14 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第4章-变量、作用域和内存问题"><a href="#第4章-变量、作用域和内存问题" class="headerlink" title="第4章 变量、作用域和内存问题"></a>第4章 变量、作用域和内存问题</h2><h3 id="1-基本类型值和引用类型值"><a href="#1-基本类型值和引用类型值" class="headerlink" title="1. 基本类型值和引用类型值"></a>1. 基本类型值和引用类型值</h3><p>注意区别：ECMAScript有6种<strong>数据类型</strong>（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同<strong>数据类型的值</strong>，即<br><strong>基本类型值</strong> 是指简单的数据段<br><strong>引用类型值</strong>是指那些可能由多个值构成的对象</p>
+<p>5种基本数据类型：Undefined、Null、Boolean、Number、String是<strong>基本类型值</strong>，是<strong>按值访问</strong>的，因为可以操作保存在变量中的实际的值。<br>1种复杂数据类型：Object是<strong>引用类型值</strong>，是<strong>按引用访问</strong>的，因为操作对象时，实际上是在操作对象的引用而不是实际的对象。<br>
+        
+          <p class="article-more-link">
+            <a href="/2016/11/14/JS高程（三）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（二）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/11/03/JS高程（二）/">JS高程（二）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-11-03T03:50:23.000Z" itemprop="datePublished">Nov 3 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第3章-基本概念"><a href="#第3章-基本概念" class="headerlink" title="第3章 基本概念"></a>第3章 基本概念</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h3><ul>
+<li><p>区分大小写</p>
+</li>
+<li><p>多行注释</p>
+  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/*</div><div class="line"> * 这两行的星星是没有必要的，</div><div class="line"> * 但就是好看啊。</div><div class="line"> */</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="2-关键字和保留字"><a href="#2-关键字和保留字" class="headerlink" title="2. 关键字和保留字"></a>2. 关键字和保留字</h3><p>这两个的异同是什么呢？<br>异：</p>
+<blockquote>
+<p>关键字可用于表示控制语句的开始或结束，或者用于执行特定操作等</p>
+<p>保留字有可能将来被用作关键字</p>
+</blockquote>
+<p>同：都是小写的。。</p>
+<h3 id="3-变量"><a href="#3-变量" class="headerlink" title="3. 变量"></a>3. 变量</h3>
+        
+          <p class="article-more-link">
+            <a href="/2016/11/03/JS高程（二）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Android还踢球app总结（一）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2016/10/30/Android还踢球app总结（一）/">Android还踢球app总结（一）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2016-10-30T08:27:03.000Z" itemprop="datePublished">Oct 30 2016</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这个小项目做完快半年多了，一直想总结一下，记录一些想法和技能。大概分五篇完成，第一篇介绍目标人群、需求分析还有功能介绍；第二篇介绍界面设计及简单的代码实现；第三篇介绍”开发模式“；第四篇介绍用到的第三方服务；第五篇介绍一些小的功能点和知识点。</p>
+<h2 id="1-目标人群"><a href="#1-目标人群" class="headerlink" title="1.目标人群"></a>1.目标人群</h2><p>当然是广大的足球爱好者，是真正想下场踢球的足球爱好者。</p>
+<p>稍微扯点别的，为什么取“还踢球”这个名字？现在中国足球很让人失望（貌似从自己真正看球时就一直让人失望，除了之前高洪波带着打韩国、德国、法国那几场……），但真正爱球的人谁不希望他变得更好呢，再差也想看，想着能变得好一点。“还踢球”是星爷《功夫》里的一句台词，一群小孩在踢球，球被踢到星爷这边，然后近景是星爷的腿，远处一群小孩，两栋破楼，星爷来了一段freestyle，很帅，小孩问：“叔叔，可不可教我们踢球啊？”。没想到星爷回的是：”还踢球？！“，然后一脚把球踩“泄”了。这应该能够表达很多人对中国足球的感受了……但真要这样的话，中国足球是不可能有出头之日了。有时候有中国队的比赛，周围不看球的人总会说“啊，中国队连XX都踢不过啊”，“不用看了，肯定输了”，稍微瞥一眼直播，“这都停不住”，“这配合也太烂了吧”……诸如此类，网上的喷子更不用说了。很心烦，但感觉说什么都没用。我们能做得是真的去踢踢球，然后能够慢慢影响周围的人觉得说踢好球真不是件容易的事，而又是一件令人激动、令人开心的事。</p>
+<h2 id="2-需求分析"><a href="#2-需求分析" class="headerlink" title="2.需求分析"></a>2.需求分析</h2><p>真的开发一款软件时，需求分析很重要的。但没有亲身经历过，只是看过课本上的讲的。出一份需求分析文档更麻烦了。这里的需求分析都是自己凭空想的，起码自己曾经也算个足球“超级狂der”爱好者吧。文档里主要有写可行性分析和功能需求（用用例图和用例描述进行介绍）。</p>
+<p>自己想要做这一款app时主要是由于自己需求。想踢球时不知道谁有空，在哪里可以踢，尤其是刚到一个新的城市时。虽然踢一次，大家可以留联系方式，但其实不可能与所有踢球的朋友联系上。所以我最想要的功能是可以发布一些约球的信息，填写时间、地点、几人制的，大家可以报名，人多了，去了也可以分拨。然后按照约球的时间排序，大家也可以浏览什么时间什么地点有球踢，可以选择的去参加。这个功能其实就类似一个论坛，能够发帖、浏览帖子。</p>
+        
+          <p class="article-more-link">
+            <a href="/2016/10/30/Android还踢球app总结（一）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/archives/page/2/">&laquo;</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/4/">&raquo;</a>
+  </nav>
+</div> -->
+
 </section>
       </div>
     </div>

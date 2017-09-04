@@ -202,7 +202,245 @@ MathJax.Hub.Config({
     </div></section>
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
+  </nav>
 </div>
+<!-- <div class="main_center">
+  
+    <article id="post-吐槽2" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/08/31/吐槽2/">吐槽2</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-08-31T06:56:54.000Z" itemprop="datePublished">Aug 31 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>不同的category。和resume的设置方法不一样。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-重装系统后配置hexo" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/08/11/重装系统后配置hexo/">重装系统后配置 Hexo</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-08-11T11:08:48.000Z" itemprop="datePublished">Aug 11 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>重装系统后，只是将系统盘格式化了，保留了 HexoBlog 文件夹。</p>
+<p>1、 安装 Node.js、安装 Git Bash。<br>2、 安装 Hexo。<br>3、 在 Git Bash 中配置 useremail 和 username。<br>4、 检查 HexoBlog 中的 _config 文件中 deloy 的配置是否正确。type: git; repository: git@github.com:htxf/htxf.github.io.git; branch: master<br>5、 根据 GitHub 的<a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank" rel="external">教程</a>重新再生成 SSH keys （默认在 C:\Users\Administrator 文件夹下）、将其加入到 Git 中、将其加入到 GitHub 中。</p>
+<p>PS：如果之前将生成的 ssh 放到其他盘中，重装系统后应该就不用重新生成 ssh key 了吧，只需安装了将其加入Git中，此时GitHub中还保存着之前的sshkey了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-重装系统/">hexo 重装系统</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Python爬虫-爬取孙艺珍Instagram上的照片和视频" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/">Python爬虫--爬取孙艺珍Instagram上的照片和视频</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-29T07:01:43.000Z" itemprop="datePublished">Mar 29 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-需求"><a href="#1-需求" class="headerlink" title="1. 需求"></a>1. 需求</h3><p>爬取到<a href="https://www.instagram.com/yejinhand/">孙艺珍Instagram</a>上的所有照片和视频。</p>
+<h3 id="2-解决过程"><a href="#2-解决过程" class="headerlink" title="2. 解决过程"></a>2. 解决过程</h3><h4 id="阶段1"><a href="#阶段1" class="headerlink" title="阶段1"></a>阶段1</h4><p>先打开网页，OBOB。</p>
+<p>该页面初始时只显示12张照片，通过点击”更多“按钮，屏幕一直往下滚动，会显示更多，直到显示出所有的照片和视频。在此过程中，该网页并没有重新加载。所以新显示出来的照片和视频是通过Ajax技术从服务器获取到的。</p>
+<p>之前理解的爬虫一直是找HTML文件中的某些内容，并且根据某些规则不停地更新需要请求的网页列表，这样就不断的有新的HTML文件。</p>
+<p>针对现在这种情况。会有两种解决方案？一种是在代码中模拟屏幕滚动，将所有内容都显示出来后，爬下整个HTML，从中找到照片和视频的url（或者边滚动边查找）；另一种是直接去找<strong>XHR</strong>（XmlHttpRequest对象），其中肯定存有照片和视频的url信息。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/29/Python爬虫-爬取孙艺珍Instagram上的照片和视频/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-爬虫/">python 爬虫</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（七）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/03/13/JS高程（七）/">JS高程（七）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-13T11:25:47.000Z" itemprop="datePublished">Mar 13 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第七章-函数表达式"><a href="#第七章-函数表达式" class="headerlink" title="第七章 函数表达式"></a>第七章 函数表达式</h2><p>函数表达式是干什么的？用来创建函数的。创建函数的方法有：<strong>函数声明</strong>、<strong>函数表达式</strong>。</p>
+<p>函数声明，有个特征：<strong>函数声明提升</strong>。函数表达式并没有。</p>
+<p>函数表达式的语法形式：有两种？一种，创建一个函数表达式，没有给这个函数表达式起名字。这个函数就叫做<strong>匿名函数（拉姆达函数）</strong>；另一种，创建一个函数表达式，并给这个函数表达式起了个名字。这个函数就叫做<strong>命名函数表达式</strong>。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/13/JS高程（七）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（六）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/03/05/JS高程（六）/">JS高程（六）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-05T09:15:14.000Z" itemprop="datePublished">Mar 5 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第6章-面向对象的程序设计"><a href="#第6章-面向对象的程序设计" class="headerlink" title="第6章 面向对象的程序设计"></a>第6章 面向对象的程序设计</h2><p>JS与传统的面向对象（Object-Oriented）的语言不同，它没有类的概念。</p>
+<p>可以把JS的对象看作是散列表：无非就是一组名值对，其中值可以是<strong>数据</strong>或<strong>函数</strong>。</p>
+<p><strong>每个对象</strong>都是基于一个<strong>引用类型</strong>创建的，这个引用类型可以是原生引用类型（Object、Array、Date、RegExp、Function、基本包装类型（Boolean、Number、String）、Math），也可以是用户自定义的类型。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/05/JS高程（六）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/2/">&raquo;</a>
+  </nav>
+</div> -->
+
 </section>
       </div>
     </div>

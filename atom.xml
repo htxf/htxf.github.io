@@ -488,7 +488,7 @@
     <link href="http://yoursite.com/2017/02/27/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%BA%94%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/27/JS高程（五）/</id>
     <published>2017-02-27T06:00:42.000Z</published>
-    <updated>2017-08-31T07:11:53.286Z</updated>
+    <updated>2017-09-04T08:04:32.039Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）"><a href="#第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）" class="headerlink" title="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）"></a>第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）</h2><h3 id="5-5-Function类型"><a href="#5-5-Function类型" class="headerlink" title="5.5 Function类型"></a>5.5 Function类型</h3><blockquote>
 <p>函数是对象。<br>函数名实际上是一个指向对象的指针。</p>
@@ -763,7 +763,7 @@
     <link href="http://yoursite.com/2017/02/22/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
     <id>http://yoursite.com/2017/02/22/JS高程（四）/</id>
     <published>2017-02-22T09:17:49.000Z</published>
-    <updated>2017-08-31T07:08:04.991Z</updated>
+    <updated>2017-09-04T08:03:50.296Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第5章-引用类型（一）（Object、Array、Date）"><a href="#第5章-引用类型（一）（Object、Array、Date）" class="headerlink" title="第5章 引用类型（一）（Object、Array、Date）"></a>第5章 引用类型（一）（Object、Array、Date）</h2><p><strong>引用类型</strong>是一种数据结构，和其他面向对象语言中的<strong>类</strong>很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型<strong>Object</strong>，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，也有许多内置的<strong>原生引用类型</strong>：Array、Date、RegExp、Function、基本包装类型、单体内置对象。</p>
 <a id="more"></a>
@@ -935,7 +935,7 @@
       <category term="note" scheme="http://yoursite.com/categories/note/"/>
     
     
-      <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -1063,7 +1063,7 @@
     <link href="http://yoursite.com/2016/11/14/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%B8%89%EF%BC%89/"/>
     <id>http://yoursite.com/2016/11/14/JS高程（三）/</id>
     <published>2016-11-14T03:08:26.000Z</published>
-    <updated>2017-08-31T07:21:05.130Z</updated>
+    <updated>2017-09-04T08:03:46.360Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第4章-变量、作用域和内存问题"><a href="#第4章-变量、作用域和内存问题" class="headerlink" title="第4章 变量、作用域和内存问题"></a>第4章 变量、作用域和内存问题</h2><h3 id="1-基本类型值和引用类型值"><a href="#1-基本类型值和引用类型值" class="headerlink" title="1. 基本类型值和引用类型值"></a>1. 基本类型值和引用类型值</h3><p>注意区别：ECMAScript有6种<strong>数据类型</strong>（5种基本数据类型，1种复杂数据类型）；ECMAScript变量可能包含2种不同<strong>数据类型的值</strong>，即<br><strong>基本类型值</strong> 是指简单的数据段<br><strong>引用类型值</strong>是指那些可能由多个值构成的对象</p>
 <p>5种基本数据类型：Undefined、Null、Boolean、Number、String是<strong>基本类型值</strong>，是<strong>按值访问</strong>的，因为可以操作保存在变量中的实际的值。<br>1种复杂数据类型：Object是<strong>引用类型值</strong>，是<strong>按引用访问</strong>的，因为操作对象时，实际上是在操作对象的引用而不是实际的对象。<br><a id="more"></a></p>
@@ -1119,7 +1119,7 @@
       <category term="note" scheme="http://yoursite.com/categories/note/"/>
     
     
-      <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -1128,7 +1128,7 @@
     <link href="http://yoursite.com/2016/11/03/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
     <id>http://yoursite.com/2016/11/03/JS高程（二）/</id>
     <published>2016-11-03T03:50:23.000Z</published>
-    <updated>2017-08-31T07:20:58.386Z</updated>
+    <updated>2017-09-04T08:05:38.224Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第3章-基本概念"><a href="#第3章-基本概念" class="headerlink" title="第3章 基本概念"></a>第3章 基本概念</h2><h3 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h3><ul>
 <li><p>区分大小写</p>
@@ -1419,7 +1419,7 @@
       <category term="note" scheme="http://yoursite.com/categories/note/"/>
     
     
-      <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -1542,7 +1542,7 @@
     <link href="http://yoursite.com/2016/10/26/JS%E9%AB%98%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
     <id>http://yoursite.com/2016/10/26/JS高程（一）/</id>
     <published>2016-10-26T13:24:23.000Z</published>
-    <updated>2017-08-31T07:11:30.846Z</updated>
+    <updated>2017-09-04T08:05:42.097Z</updated>
     
     <content type="html"><![CDATA[<h2 id="第1章-简介"><a href="#第1章-简介" class="headerlink" title="第1章 简介"></a>第1章 简介</h2><h3 id="1-几个人东"><a href="#1-几个人东" class="headerlink" title="1. 几个人东"></a>1. 几个人东</h3><ul>
 <li>布兰登 艾奇 (Brendan Eich)</li>
@@ -1613,7 +1613,7 @@
       <category term="note" scheme="http://yoursite.com/categories/note/"/>
     
     
-      <category term="JS基础" scheme="http://yoursite.com/tags/JS%E5%9F%BA%E7%A1%80/"/>
+      <category term="js基础" scheme="http://yoursite.com/tags/js%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
@@ -1622,14 +1622,14 @@
     <link href="http://yoursite.com/2016/08/31/%E5%90%90%E6%A7%BD1/"/>
     <id>http://yoursite.com/2016/08/31/吐槽1/</id>
     <published>2016-08-31T07:00:42.000Z</published>
-    <updated>2017-08-31T09:02:22.157Z</updated>
+    <updated>2017-09-04T10:47:30.654Z</updated>
     
-    <content type="html"><![CDATA[<p>吐槽2</p>
+    <content type="html"><![CDATA[<p>吐槽</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;吐槽2&lt;/p&gt;
+      &lt;p&gt;吐槽&lt;/p&gt;
 
     
     </summary>

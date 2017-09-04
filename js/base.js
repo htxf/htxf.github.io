@@ -76,7 +76,7 @@
 		// }
 
 		// 另一种做法 这才是正确的做法
-		if (window.location.pathname == '/resume/') {
+		if (window.location.pathname !== '/resume/' && window.location.pathname !== '/') {
 			$('body').addClass('bodyNotes');
 		}
 
@@ -92,6 +92,20 @@
 			$('body').addClass('bodyNotes');
 
 		}
+
+		// 若是点击文章标题进到新的窗口(浏览器自带功能) 文章背景、地标都有问题
+		// 通过window.location.pathname中的/的个数来判断，主页'/'，简历页面'/resume/'，剩下的都是文章和文章目录至少有三个'/'
+		if (window.location.pathname.match(/\//g).length >= 3) {
+			$('#insert').removeClass('home_logo');
+			$('body').addClass('bodyNotes');
+			if (document.referrer.match('note') !== null || window.sessionStorage.notes_click == "true") {
+				$('#insert').html('<a href="/categories/note">Notes</a>');
+			} else {
+				$('#insert').html('<a href="/categories/tucao">Tucaos</a>');
+			}
+			$('#insert').addClass('landmark notes animated fadeInLeft');
+		}
+
 		
 		// 新增的tucao类别
 		if (window.sessionStorage.tucaos_click =="true") {

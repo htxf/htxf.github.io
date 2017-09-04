@@ -202,7 +202,261 @@ MathJax.Hub.Config({
     </div></section>
   
 
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/archives/">&laquo;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/3/">&raquo;</a>
+  </nav>
 </div>
+<!-- <div class="main_center">
+  
+    <article id="post-TensorFLow学习笔记（三）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/03/04/TensorFLow学习笔记（三）/">TensorFLow学习笔记（三）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-03-04T12:35:50.000Z" itemprop="datePublished">Mar 4 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>官方文档第三篇。<a href="https://www.tensorflow.org/get_started/mnist/pros">Deep MNIST for Experts</a></p>
+<p>这篇的前半部分和上一篇一样，用单一线性层构建了一个softmax回归模型，其预测准确度是92%。重点是后半部分，用多层卷积神经网络构建了一个softmax回归模型（或者说多层卷积神经网络+softmax回归），其准确度可以达到99.2%。</p>
+<p>整个网络的结构是：第一层卷积 + 第一层池化 + 第二层卷积 + 第二层池化 + 全连接层 + Dropout层 + softmax回归。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/04/TensorFLow学习笔记（三）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-TensorFLow学习笔记（二）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/02/28/TensorFLow学习笔记（二）/">TensorFLow学习笔记（二）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-02-28T09:09:08.000Z" itemprop="datePublished">Feb 28 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>官方文档第二篇。<a href="https://www.tensorflow.org/get_started/mnist/beginners">MNIST for ML Beginners</a><br>先介绍MNIST，还有softmax regression（softmax回归），然后利用tensorflow构建一个模型。</p>
+<h3 id="1-MNIST"><a href="#1-MNIST" class="headerlink" title="1. MNIST"></a>1. MNIST</h3><p>MNIST对于机器学习就相当于Hello World对于一门编程语言。</p>
+<p>MNIST是一个简单的计算机视觉数据集。有好多手写数字图片，并有相应的<strong>label标记</strong>，说明这张图片是数字几（0~9）。</p>
+<p>一个简单的任务就是，训练一个模型，然后给它一张图片，它会预测出这张图片是数字几。（是一个分类Classification问题，多分类）</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/28/TensorFLow学习笔记（二）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（五）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/02/27/JS高程（五）/">JS高程（五）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-02-27T06:00:42.000Z" itemprop="datePublished">Feb 27 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）"><a href="#第5章-引用类型（二）（Function类型、基本包装类型、单体内置对象）" class="headerlink" title="第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）"></a>第5章 引用类型（二）（Function类型、基本包装类型、单体内置对象）</h2><h3 id="5-5-Function类型"><a href="#5-5-Function类型" class="headerlink" title="5.5 Function类型"></a>5.5 Function类型</h3><blockquote>
+<p>函数是对象。<br>函数名实际上是一个指向对象的指针。</p>
+</blockquote>
+<p><strong>函数的定义</strong></p>
+<ul>
+<li>法一：<strong>函数声明</strong></li>
+<li>法二：<strong>函数表达式</strong></li>
+<li>法三：使用Function构造函数</li>
+</ul>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/27/JS高程（五）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-TensorFlow学习笔记（一）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/02/23/TensorFlow学习笔记（一）/">TensorFlow学习笔记（一）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-02-23T11:30:06.000Z" itemprop="datePublished">Feb 23 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>按照<a href="https://www.tensorflow.org/">官网</a>的介绍、教程学习。整理、记录知识点。</p>
+<p>这一篇是最开始的一篇。<a href="https://www.tensorflow.org/get_started/get_started">Getting Started With TensorFlow</a></p>
+<p>现在的TesorFlow的API可以分为两个，一个低级一点的，称为TensorFlow Core，更适合研究人员使用，对所构建的模型有更深层的控制；另一个高级一点的，使用更简单，但还在开发中。学会了更底层的东西，更简答的用法可以很快掌握。这里只记录TensorFlow Core中的知识点。</p>
+<p>这篇文章其实可以分为两部分。一部分介绍TensorFlow中的一些名词、类、方法等等。另一部分介绍了一个简单的机器学习模型——线性回归。<br>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/23/TensorFlow学习笔记（一）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tensorflow学习/">tensorflow学习</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JS高程（四）" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name" >
+      <a class="article-title" href="/2017/02/22/JS高程（四）/">JS高程（四）</a>
+    </h1>
+  
+
+
+        <div class="article-meta">
+          <span class="article-date">
+  <time datetime="2017-02-22T09:17:49.000Z" itemprop="datePublished">Feb 22 2017</time>
+</span>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="第5章-引用类型（一）（Object、Array、Date）"><a href="#第5章-引用类型（一）（Object、Array、Date）" class="headerlink" title="第5章 引用类型（一）（Object、Array、Date）"></a>第5章 引用类型（一）（Object、Array、Date）</h2><p><strong>引用类型</strong>是一种数据结构，和其他面向对象语言中的<strong>类</strong>很相似。之前介绍的JS中的6种数据类型，5种基本数据类型Undefined，Null，Boolean，String，Number，还有1种复杂数据类型<strong>Object</strong>，这里用Object是由于JS中大多数引用类型的值都是Object类型的实例。JS中可以通过Object创建用户自定义的引用类型，也有许多内置的<strong>原生引用类型</strong>：Array、Date、RegExp、Function、基本包装类型、单体内置对象。</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/02/22/JS高程（四）/#more">→_→阅读全文</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js基础/">js基础</a></li></ul>
+
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/archives/">&laquo;</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/page/3/">3</a><a class="page-number" href="/archives/page/4/">4</a><a class="page-number" href="/archives/page/5/">5</a><a class="extend next" rel="next" href="/archives/page/3/">&raquo;</a>
+  </nav>
+</div> -->
+
 </section>
       </div>
     </div>
