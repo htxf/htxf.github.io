@@ -76,7 +76,7 @@
 		// }
 
 		// 另一种做法 这才是正确的做法
-		if (window.location.pathname !== '/resume/' && window.location.pathname !== '/') {
+		if (window.location.pathname == '/resume/' && window.location.pathname !== '/') {
 			$('body').addClass('bodyNotes');
 		}
 
